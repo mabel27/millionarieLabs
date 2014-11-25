@@ -6,7 +6,10 @@ var app = new EmberApp();
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
-//
+
+// Tell Broccoli that we want this file to be concatenated with our vendor.css
+app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That
 // object's keys should be the environment name and the values
