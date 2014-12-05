@@ -5,7 +5,12 @@ var pickFiles = require('broccoli-static-compiler');
 var mergeTrees = require('broccoli-merge-trees');
 
 var app = new EmberApp();
-var bootstrapFonts = pickFiles('bower_components/bootstrap/dist/fonts', {
+var bootstrapFonts = pickFiles('bower_components/bootstrap/fonts', {
+  srcDir: '/',
+  files: ['**/*'],
+  destDir: '/fonts'
+});
+var fontAwesome = pickFiles('vendor/font-awesome-4.1.0/fonts', {
   srcDir: '/',
   files: ['**/*'],
   destDir: '/fonts'
@@ -17,7 +22,6 @@ var bootstrapFonts = pickFiles('bower_components/bootstrap/dist/fonts', {
 // output files.
 
 // Tell Broccoli that we want this file to be concatenated with our vendor.css and vendor.js
-app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 
 // If you need to use different assets in different
@@ -32,4 +36,4 @@ app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 
 var outputTrees = [app.toTree()]
 
-module.exports = mergeTrees([app.toTree(), bootstrapFonts]);
+module.exports = mergeTrees([app.toTree(), bootstrapFonts, fontAwesome]);
