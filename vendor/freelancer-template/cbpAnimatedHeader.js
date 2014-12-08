@@ -9,11 +9,15 @@
  * http://www.codrops.com
  */
 var cbpAnimatedHeader = (function() {
+	var docElem, header, didScroll, changeHeaderOn;
 
-	var docElem = document.documentElement,
-		header = document.querySelector( '.navbar-fixed-top' ),
-		didScroll = false,
+	window.addEventListener('load', function(){
+		docElem = document.documentElement;
+		header = document.querySelector( '.navbar-fixed-top' );
+		didScroll = false;
 		changeHeaderOn = 300;
+		init();
+	});
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
@@ -38,7 +42,4 @@ var cbpAnimatedHeader = (function() {
 	function scrollY() {
 		return window.pageYOffset || docElem.scrollTop;
 	}
-
-	init();
-
 })();

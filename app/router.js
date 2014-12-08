@@ -6,8 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('about');
-  this.route('speakers');
+  this.route('landingPage', { path: '/' });
 });
 
 export default Router;

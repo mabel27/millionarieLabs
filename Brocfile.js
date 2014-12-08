@@ -24,6 +24,16 @@ var fontAwesome = pickFiles('vendor/font-awesome-4.1.0/fonts', {
 // Tell Broccoli that we want this file to be concatenated with our vendor.css and vendor.js
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 
+// Plugin JavaScript
+app.import('vendor/jquery.easing.min.js');
+app.import('vendor/freelancer-template/classie.js');
+app.import('vendor/freelancer-template/cbpAnimatedHeader.js');
+
+app.import('vendor/freelancer-template/contact_me.js');
+app.import('vendor/freelancer-template/jqBootstrapValidation.js');
+
+app.import('vendor/freelancer-template/freelancer.js');
+
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That
 // object's keys should be the environment name and the values
