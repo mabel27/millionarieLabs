@@ -15,7 +15,11 @@ var fontAwesome = pickFiles('vendor/font-awesome-4.1.0/fonts', {
   files: ['**/*'],
   destDir: '/fonts'
 });
-
+var kidsFont = pickFiles('vendor/kids-font/fonts', {
+  srcDir: '/',
+  files: ['**/*'],
+  destDir: '/fonts'
+})
 
 
 // Use `app.import` to add additional libraries to the generated
@@ -34,6 +38,10 @@ app.import('vendor/freelancer-template/jqBootstrapValidation.js');
 
 app.import('vendor/freelancer-template/freelancer.js');
 
+// a js link from //s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js for mailchamp
+app.import('vendor/mc-validate.js');
+
+
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That
 // object's keys should be the environment name and the values
@@ -46,4 +54,4 @@ app.import('vendor/freelancer-template/freelancer.js');
 
 var outputTrees = [app.toTree()]
 
-module.exports = mergeTrees([app.toTree(), bootstrapFonts, fontAwesome]);
+module.exports = mergeTrees([app.toTree(), bootstrapFonts, fontAwesome, kidsFont]);
