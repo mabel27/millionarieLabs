@@ -25,6 +25,9 @@
                     <li class="page-scroll">
                         <a href="#portfolio" class="kf">Features</a>
                     </li>
+                    <li>
+                        {{#link-to 'landingPage.blog' class='kf'}}blog{{/link-to}}
+                    </li>
                     <li class="page-scroll">
                         <a href="#contact" class="kf">Join Us</a>
                     </li>
@@ -35,21 +38,6 @@
         <!-- /.container-fluid -->
     </nav>
 
-
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="assets/image/profile.JPG" alt="">
-                    <div class="intro-text">
-                        <span class="name"><span class="kf">Millionaire Labs</span></span>
-                        <hr class="star-light">
-                        <span class="skills kf">Help kids understand money.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
     {{outlet}}
 
