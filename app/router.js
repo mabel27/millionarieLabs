@@ -7,7 +7,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('landingPage', { path: '/' }, function() {
-    this.route('blog');
+    this.resource('blog', function() {
+      this.route('1');
+    });
   });
 });
 
