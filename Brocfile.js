@@ -41,6 +41,10 @@ app.import('vendor/freelancer-template/freelancer.js');
 // a js link from //s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js for mailchamp
 app.import('vendor/mc-validate.js');
 
+// add wow library
+app.import('vendor/wow/animate.css');
+app.import('vendor/wow/wow.min.js');
+
 
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That
