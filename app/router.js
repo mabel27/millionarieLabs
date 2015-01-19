@@ -9,6 +9,8 @@ Router.map(function() {
   this.resource('landingPage', { path: '/' }, function() {
     this.resource('blog', function() {
       this.route('1');
+      this.route('2');
+      // add new blog route here.
     });
   });
 });
