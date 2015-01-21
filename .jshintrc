@@ -3,7 +3,8 @@
     "document",
     "window",
     "-Promise",
-    "Pretender"
+    "Pretender",
+    "_"
   ],
   "browser" : true,
   "boss" : true,
