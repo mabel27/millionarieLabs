@@ -10,36 +10,36 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand kf" href="#page-top"><i class="ki k-tree"></i>Millionaire Labs</a>
+                <a class="navbar-brand kf" style="cursor:pointer" {{action 'transitionAndScroll' 'landingPage.index' '.page-top' target=view}}><i class="ki k-tree"></i>Millionaire Labs</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about" class="kf">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio" class="kf">Features</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#team" class="kf">Team</a>
-                    </li>
-                    <li>
-                        {{#link-to 'blog.index' class='kf'}}blog{{/link-to}}
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact" class="kf">Get Involve</a>
-                    </li>
-                    <li class="page-scroll">
-                        {{#link-to 'landingPage.signUp' class='kf'}}Sign Up{{/link-to}}
-                    </li>
-                    <li class="page-scroll">
-                        {{#link-to 'landingPage.signIn' class='kf'}}Sign In{{/link-to}}
-                    </li>
+                    
+                    {{#nav-li active=navbar.about.active dataTarget=navbar.about.pageLocation route=navbar.about.route onClickActions=navbar.about.actions class='kf'}}
+                        {{navbar.about.text}}
+                    {{/nav-li}}
+
+                    {{#nav-li active=navbar.features.active dataTarget=navbar.features.pageLocation route=navbar.features.route onClickActions=navbar.features.actions class='kf'}}
+                        {{navbar.features.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.team.active dataTarget=navbar.team.pageLocation route=navbar.team.route onClickActions=navbar.team.actions class='kf'}}
+                        {{navbar.team.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.blog.active dataTarget=navbar.blog.pageLocation route=navbar.blog.route onClickActions=navbar.blog.actions class='kf'}}
+                        {{navbar.blog.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.signUp.active dataTarget=navbar.signUp.pageLocation route=navbar.signUp.route onClickActions=navbar.signUp.actions class='kf'}}
+                        {{navbar.signUp.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.signUp.active dataTarget=navbar.signUp.pageLocation route=navbar.signUp.route onClickActions=navbar.signUp.actions class='kf'}}
+                        {{navbar.signUp.text}}
+                    {{/nav-li}}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -47,8 +47,11 @@
         <!-- /.container-fluid -->
     </nav>
 
+    <div class='page-top'>
 
-    {{outlet}}
+        {{outlet}}
+
+    </div>
 
     <!-- Footer -->
     <footer class="text-center">
