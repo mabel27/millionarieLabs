@@ -19,10 +19,12 @@ export default Ember.Component.extend({
         case 'transitionToRoute': {
           console.log('>>> switch case of  ' + action);
           self.sendAction(action, self.get('route'));
+          break;
         }
         case 'scrollTo': {
           console.log('>>> switch case of  ' + action);
           self.sendAction(action, self.get('pageLocation'));
+          break;
         }
       }
     });
