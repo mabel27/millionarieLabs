@@ -12,7 +12,7 @@ export default Ember.Component.extend({
   transitionToRoute: 'transitionToRoute',
   scrollTo: 'scrollTo',
   click: function() {
-    self = this;
+    var self = this;
     console.log(self.get('onClickActions'));
     _.each(self.get('onClickActions'), function(action){
       switch (action) {

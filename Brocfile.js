@@ -29,6 +29,7 @@ var kidsFont = pickFiles('vendor/kids-font/fonts', {
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 app.import('bower_components/underscore/underscore-min.js');
 app.import('bower_components/underscore/underscore-min.map');
+app.import('bower_components/moment/moment.js');
 
 // Plugin JavaScript
 app.import('vendor/jquery.easing.min.js');
