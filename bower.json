@@ -17,6 +17,7 @@
   "devDependencies": {
     "bootstrap": "~3.3.1",
     "pretender": "~0.4.2",
-    "underscore": "~1.7.0"
+    "underscore": "~1.7.0",
+    "moment": "~2.9.0"
   }
 }
