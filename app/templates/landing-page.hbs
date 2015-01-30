@@ -10,24 +10,36 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand kf" href="#page-top"><i class="ki k-tree"></i>Money Tree</a>
+                <a class="navbar-brand kf" style="cursor:pointer" {{action 'transitionAndScroll' 'landingPage.index' '.page-top' target=view}}><i class="ki k-tree"></i>Millionaire Labs</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about" class="kf">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio" class="kf">Features</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact" class="kf">Mailing List</a>
-                    </li>
+                    
+                    {{#nav-li active=navbar.about.active dataTarget=navbar.about.pageLocation route=navbar.about.route onClickActions=navbar.about.actions class='kf'}}
+                        {{navbar.about.text}}
+                    {{/nav-li}}
+
+                    {{#nav-li active=navbar.features.active dataTarget=navbar.features.pageLocation route=navbar.features.route onClickActions=navbar.features.actions class='kf'}}
+                        {{navbar.features.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.team.active dataTarget=navbar.team.pageLocation route=navbar.team.route onClickActions=navbar.team.actions class='kf'}}
+                        {{navbar.team.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.blog.active dataTarget=navbar.blog.pageLocation route=navbar.blog.route onClickActions=navbar.blog.actions class='kf'}}
+                        {{navbar.blog.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.signUp.active dataTarget=navbar.signUp.pageLocation route=navbar.signUp.route onClickActions=navbar.signUp.actions class='kf'}}
+                        {{navbar.signUp.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.signUp.active dataTarget=navbar.signUp.pageLocation route=navbar.signUp.route onClickActions=navbar.signUp.actions class='kf'}}
+                        {{navbar.signUp.text}}
+                    {{/nav-li}}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -35,169 +47,11 @@
         <!-- /.container-fluid -->
     </nav>
 
+    <div class='page-top'>
 
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="assets/image/profile.JPG" alt="">
-                    <div class="intro-text">
-                        <span class="name"><span class="kf">Money Tree</span></span>
-                        <hr class="star-light">
-                        <span class="skills kf">Help kids understand money.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+        {{outlet}}
 
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    
-                   <img class="img-responsive" src="assets/image/p1.png">  <h2 class="kf">Help Kids Understand Saving and Investment</h2>
-                    
-                    <hr class="star-primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <img class="img-responsive" src="assets/image/p2.png">
-                <div class="col-lg-12 text-center">
-                     <h2 class="kf">Teach Your Children About Credit</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="kf">Features</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="assets/image/portfolio/cabin.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="assets/image/portfolio/cake.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="assets/image/portfolio/circus.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="assets/image/portfolio/game.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="assets/image/portfolio/safe.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="assets/image/portfolio/submarine.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Begin MailChimp Signup Form -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="kf">Subscribe to our mailing list</h2>
-                    <hr class="star-primary">
-                    <p class="kf">We will only send you valuable content.</p>
-                    <br />
-                    <p class="indicates-required kf"><span class="asterisk">*</span> indicates required</p>
-                </div>
-            </div>
-            <div class="row" id="mc_embed_signup">
-                <form action="//beautycirclee.us9.list-manage.com/subscribe/post?u=eea4dd4a46d5a86b092e7938f&amp;id=2e72877313" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                  <div id="mc_embed_signup_scroll" class="col-lg-8 col-lg-offset-2">
-                    <div class="row control-group">
-                        <div class="mc-field-group form-group col-xs-12 floating-label-form-group controls">
-                          <label class="kf" for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-                          </label>
-                          <input type="email" value="" name="EMAIL" class="required email form-control kf" id="mce-EMAIL" placeholder="Email Address *">
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="mc-field-group form-group col-xs-12 floating-label-form-group controls">
-                          <label class="kf" for="mce-FNAME">First Name </label>
-                          <input type="text" value="" name="FNAME" class="form-control kf" id="mce-FNAME" placeholder="First Name">
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="mc-field-group form-group col-xs-12 floating-label-form-group controls">
-                          <label class="kf" for="mce-LNAME">Last Name </label>
-                          <input type="text" value="" name="LNAME" class="form-control kf" id="mce-LNAME" placeholder="Last Name">
-                        </div>
-                    </div>
-                    <div id="mce-responses" class="clear">
-                      <div class="response" id="mce-error-response" style="display:none"></div>
-                      <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_eea4dd4a46d5a86b092e7938f_2e72877313" tabindex="-1" value=""></div>
-                    <br/>
-                    <div id="success"></div>
-                    <div class="row clear">
-                        <div class="form-group col-xs-12">
-                            <button type="submit" class="btn btn-success btn-lg kf"  value="Subscribe" name="subscribe" id="mc-embedded-subscribe">Sign Up Mailing List</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
+    </div>
 
     <!-- Footer -->
     <footer class="text-center">
@@ -235,7 +89,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Money Tree 2014-2015
+                        Copyright &copy; Millionaire Labs 2014-2015
                     </div>
                 </div>
             </div>
@@ -249,142 +103,4 @@
         </a>
     </div>
 
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2 class="kf">Saving Account</h2>
-                            <hr class="star-primary">
-                            <p>Savings account on money tree utilizes allowance, deposit plan and saving interest.</p>
-                            <img src="assets/image/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <button type="button" class="btn btn-default kf" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2 class="kf">Budgetting Tools</h2>
-                            <hr class="star-primary">
-                            <p>Teach kids on planning their own financial goals.</p>
-                            <img src="assets/image/portfolio/cake.png" class="img-responsive img-centered" alt="">
-                            <button type="button" class="btn btn-default kf" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2 class="kf">Investing Account</h2>
-                            <hr class="star-primary">
-                            <p>It is vital to arm your children with important investment knowledge. Money tree investing account teaches your children about risk, reward, debt security, buying and tracking. This understanding will prepare them for riding out market fluctuations and making informed decisions when others panic.</p>
-                            <img src="assets/image/portfolio/circus.png" class="img-responsive img-centered" alt="">
-                            <button type="button" class="btn btn-default kf" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2 class="kf">Reward System</h2>
-                            <hr class="star-primary">
-                            <p>Reward on chores. Motivate your children on working hard to reach a financial goal.</p>
-                            <img src="assets/image/portfolio/game.png" class="img-responsive img-centered" alt="">
-                            <button type="button" class="btn btn-default kf" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2 class="kf">Credit System</h2>
-                            <hr class="star-primary">
-                            <p>If your child can't live without a new bike, designer jeans, or a brand new game console, it may be time to teach him or her about credit. Even now, easy credit in the form of charge cards is available to teenagers, so the earlier you can teach this lesson, the better your child's chances are of avoiding a future of multiplying credit cards and high interest debt.</p>
-                            <img src="assets/image/portfolio/safe.png" class="img-responsive img-centered" alt="">
-                            <button type="button" class="btn btn-default kf" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2 class="kf">Social Element</h2>
-                            <hr class="star-primary">
-                            <p>Money Tree enable the social elemnet on financial planning for children. Allow them to work together for shared financial goals.</p>
-                            <img src="assets/image/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <button type="button" class="btn btn-default kf" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    

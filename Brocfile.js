@@ -27,6 +27,9 @@ var kidsFont = pickFiles('vendor/kids-font/fonts', {
 
 // Tell Broccoli that we want this file to be concatenated with our vendor.css and vendor.js
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+app.import('bower_components/underscore/underscore-min.js');
+app.import('bower_components/underscore/underscore-min.map');
+app.import('bower_components/moment/moment.js');
 
 // Plugin JavaScript
 app.import('vendor/jquery.easing.min.js');
@@ -40,6 +43,10 @@ app.import('vendor/freelancer-template/freelancer.js');
 
 // a js link from //s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js for mailchamp
 app.import('vendor/mc-validate.js');
+
+// add wow library
+app.import('vendor/wow/animate.css');
+app.import('vendor/wow/wow.min.js');
 
 
 // If you need to use different assets in different
