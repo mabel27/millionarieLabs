@@ -1,8 +1,12 @@
 import DS from 'ember-data';
 
 var User = DS.Model.extend({
-  // id: DS.attr('number'),
-  email: DS.attr('string')
+  
+  userName: DS.attr('string'),
+  email: DS.attr('string'),
+  password: DS.attr('string'),
+  passwordConfirmation: DS.attr('string')
+  
 });
 
 export default User;
