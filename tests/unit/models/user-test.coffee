@@ -1,6 +1,6 @@
 `import { test, moduleForModel } from 'ember-qunit'`
 
-moduleForModel 'signup', 'Signup', {
+moduleForModel 'user', 'User', {
   # Specify the other units that are required for this test.
   needs: []
 }
