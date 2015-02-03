@@ -54,13 +54,9 @@ export default Ember.Controller.extend({
 
   },
   actions: {
-    scrollTo: function() {
+    scrollTo: function(pageLocation) {
       console.log('>>> CONTROLLER METHOD: Action scrollTo()');
-    },
-    transitionAndScroll: function(route, pageLocation) {
-      console.log('>>>  CONTROLLER METHOD: Action transitionAndScroll');
-      this.send('transitionToRoute', route);
-      this.send('scrollTo', pageLocation);
+      window.scrollTo(0, Ember.$(pageLocation).offset().top);
     }
   }
 });

@@ -14,6 +14,6 @@ export default Ember.Component.extend({
   click: function() {
     var self = this;
     self.sendAction('transitionToRoute', self.get('route'));
-    self.sendAction('scrollTo', self.get('pageLocation'));
+    self.sendAction('scrollTo', self.get('dataTarget'));
   }
 });
