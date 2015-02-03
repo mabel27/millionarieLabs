@@ -19,51 +19,46 @@ export default Ember.Controller.extend({
       text: 'About',
       route: '/',
       pageLocation: '#about',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      active: false
     },
     features: {
       text: 'Features',
       route: '/',
       pageLocation: '#portfolio',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      active: false
     },
     team: {
       text: 'Team',
       route: '/',
       pageLocation: '#team',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      active: false
     },
     blog: {
       text: 'blog',
       route: 'blog.index',
       pageLocation: '#page-top',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      active: false
     },
     signUp: {
       text: 'Sign Up',
       route: 'landingPage.signUp',
       pageLocation: '#page-top',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      active: false
     },
     signIn: {
       text: 'Sign In',
       route: 'landingPage.signIn',
       pageLocation: '#page-top',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      active: false
     }
 
   },
   actions: {
     scrollTo: function() {
-      console.log('>>> Action scrollTo()');
+      console.log('>>> CONTROLLER METHOD: Action scrollTo()');
     },
     transitionAndScroll: function(route, pageLocation) {
+      console.log('>>>  CONTROLLER METHOD: Action transitionAndScroll');
       this.send('transitionToRoute', route);
       this.send('scrollTo', pageLocation);
     }
