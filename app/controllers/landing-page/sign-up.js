@@ -2,28 +2,19 @@
 
 import Ember from 'ember';
 
-export
-default Ember.Controller.extend({
-
-  userName: null,
-  email: null,
-  password: null,
-  passwordConfirmation: null,
-
+export default Ember.Controller.extend({
+  userName: '',
+  email: '',
+  password: '',
+  passwordConfirmation: '',
+//  user: this.store.createRecord('user',{}),
   actions: {
     createUser: function () {
-
-      var user = {
-
-        userName: this.get('userName'),
-        email: this.get('email'),
-        password: this.get('password'),
-        passwordConfirmation: this.get('passwordConfirmation'),
-
-      };
-
-      user.save();
-
+      this.set('user.userName',this.get('userName'));
+      this.set('user.email',this.get('email'));
+      this.set('user.password',this.get('password'));
+      this.set('user.passwordConfirmation',this.get('passwordConfirmation'));
+      this.get('user').save();
     }
   }
 
