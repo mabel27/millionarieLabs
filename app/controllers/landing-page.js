@@ -36,26 +36,26 @@ export default Ember.Controller.extend({
     blog: {
       text: 'blog',
       route: 'blog.index',
-      pageLocation: '#page-top',
+      pageLocation: '.blog-page-top',
       active: false
     },
     signUp: {
       text: 'Sign Up',
       route: 'landingPage.signUp',
-      pageLocation: '#page-top',
+      pageLocation: '.sign-up-page-top',
       active: false
     },
     signIn: {
       text: 'Sign In',
       route: 'landingPage.signIn',
-      pageLocation: '#page-top',
+      pageLocation: '.sign-in-page-top',
       active: false
     }
 
   },
   actions: {
     scrollTo: function(pageLocation) {
-      console.log('>>> CONTROLLER METHOD: Action scrollTo()');
+      console.log('XXXX: SCROLLTO ' + Ember.$(pageLocation).offset().top);
       window.scrollTo(0, Ember.$(pageLocation).offset().top);
     }
   }
