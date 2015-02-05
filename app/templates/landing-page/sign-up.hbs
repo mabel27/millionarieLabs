@@ -10,26 +10,16 @@
       </div>
       <div class="register col-md-6">
         <div class="wow slideInLeft" data-wow-delay="0.5s">
-          <form action="" method="post" data-toggle="validator">
+          <form {{ action "createUser" on="submit"}} role= "form">
             <h2><span class="kf">Create new user </span></h2>
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-child"></i></span> 
-              <input class="form-control input-md" type="text" id="username" name="username" placeholder="Choose a Username..." required>
-            </div>
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-envelope"></i></span> 
-              <input class="form-control  input-md" data-minlength="6" type="text" id="email" name="email" placeholder="Enter your Email..." oninvalid="this.setCustomValidity('Please Enter a email Ex: user@email.com ')" required>
+              {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}}
+  
+              {{input type= "email"
+            class="form-control" placeholder="Email" value=email}}
+      
+              {{input type="password" class="form-control" placeholder="Password" value=password}}
               
-            </div>
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-key"></i></span> 
-              <input class="form-control input-md" type="password" id="inputPassword" name="password" placeholder="Choose a Password..." required>
-            </div>
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
-              <input class="form-control input-md" type="password" id="password" name="password" placeholder="Confirm the Password..."  data-match="#inputPassword" data-match-error="Whoops, these don't match"  >
-              <div class="help-block with-errors"></div>
-            </div>
+              {{input type="password" class="form-control" placeholder=" Confirm Password" value=passwordConfirmation}}
             <button class="btn btn-primary btn-md" type="submit"><span class="kf">REGISTER</span> </button>
               <button class="btn btn-primary btn-md" type="reset" > <span class="kf">CANCEL </span></button>
           </form>

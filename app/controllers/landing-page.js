@@ -19,53 +19,44 @@ export default Ember.Controller.extend({
       text: 'About',
       route: '/',
       pageLocation: '#about',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      active: false
     },
     features: {
       text: 'Features',
       route: '/',
       pageLocation: '#portfolio',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      active: false
     },
     team: {
       text: 'Team',
       route: '/',
       pageLocation: '#team',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      active: false
     },
     blog: {
       text: 'blog',
       route: 'blog.index',
-      pageLocation: '#page-top',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      pageLocation: '.blog-page-top',
+      active: false
     },
     signUp: {
       text: 'Sign Up',
       route: 'landingPage.signUp',
-      pageLocation: '#page-top',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      pageLocation: '.sign-up-page-top',
+      active: false
     },
     signIn: {
       text: 'Sign In',
       route: 'landingPage.signIn',
-      pageLocation: '#page-top',
-      active: false,
-      actions: ['transitionToRoute', 'scrollTo']
+      pageLocation: '.sign-in-page-top',
+      active: false
     }
 
   },
   actions: {
-    scrollTo: function() {
-      console.log('>>> Action scrollTo()');
-    },
-    transitionAndScroll: function(route, pageLocation) {
-      this.send('transitionToRoute', route);
-      this.send('scrollTo', pageLocation);
+    scrollTo: function(pageLocation) {
+      console.log('XXXX: SCROLLTO ' + Ember.$(pageLocation).offset().top);
+      window.scrollTo(0, Ember.$(pageLocation).offset().top);
     }
   }
 });
