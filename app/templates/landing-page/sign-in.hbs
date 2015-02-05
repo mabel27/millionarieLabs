@@ -1,10 +1,25 @@
 {{!-- /app/templates/landing-page/sign-in.hbs --}}
 
-<div class="container">
-  <div class="row" style="padding-top: 60px"></div>
-  <div class="row">
-    <div class="row" style="padding-top: 100px"></div> {{!--spacer. Can be removed once it is live--}}
-    <h3 class="kf text-center">Coming Soon !</h3>
-    <div class="row" style="padding-top: 100px"></div> {{!--spacer. Can be removed once it is live--}}
-  </div>
-</div>
+<header>
+
+  <div class="login-container container">
+    <div class="row">
+      
+          <div class="wallet col-md-4">
+          <img src="assets/image/credit35.png" alt="">
+        </div>
+      <div class="login col-md-8">
+    
+            <form {{ action "login" on="submit"}} role= "form">
+            <h2><span class="kf">Log in! </span></h2>
+              {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}}
+              {{input type="password" class="form-control" placeholder="Password" value=password}}
+              <button class="btn btn-primary btn-md" type="submit"><span class="kf">LOGIN</span> </button>
+              
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+</header>
