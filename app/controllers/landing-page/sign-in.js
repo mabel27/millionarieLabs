@@ -5,9 +5,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   userName: '',
   password: '',
-  
-    actions: {
-      
+  actions: {
     login: function () {
       this.set('user.userName',this.get('userName'));
       this.set('user.password',this.get('password'));
