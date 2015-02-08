@@ -13,20 +13,7 @@ export default Ember.Component.extend({
   scrollTo: 'scrollTo',
   click: function() {
     var self = this;
-    console.log(self.get('onClickActions'));
-    _.each(self.get('onClickActions'), function(action){
-      switch (action) {
-        case 'transitionToRoute': {
-          console.log('>>> switch case of  ' + action);
-          self.sendAction(action, self.get('route'));
-          break;
-        }
-        case 'scrollTo': {
-          console.log('>>> switch case of  ' + action);
-          self.sendAction(action, self.get('pageLocation'));
-          break;
-        }
-      }
-    });
+    self.sendAction('transitionToRoute', self.get('route'));
+    self.sendAction('scrollTo', self.get('dataTarget'));
   }
 });
