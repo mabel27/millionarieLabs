@@ -1,4 +1,4 @@
-// app/controllers/landing-page/sign-in.js
+// app/controllers/sign-in.js
 
 import Ember from 'ember';
 import LoginControllerMixin from 'simple-auth/mixins/login-controller-mixin';
