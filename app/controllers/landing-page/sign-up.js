@@ -19,17 +19,3 @@ export default Ember.Controller.extend({
   }
 
 });
-
-//   createUser: function() {
-//     var user = new Feapp.User;
-//     user.email = this.get('email');
-//     user.userName = this.get('usernljlj');
-
-//     user.save().then(function(response) {
-//       ....
-//     });
-//   }
-// },
-// onKeyUp: function() {
-
-// }
