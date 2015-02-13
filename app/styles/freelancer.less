@@ -88,6 +88,106 @@ header {
 .register-container {
     margin-top: 5px;
 }
+  
+  
+/* Sidebar Styles */
+
+  #sidebar {
+  width: inherit;
+  min-width: 220px;
+  max-width: 220px;
+  background-color: @brand-primary;
+  float: left;
+  height:100%;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+  
+  /*
+ * off Canvas sidebar
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    width:calc(100% + 220px);
+  }
+    
+  .row-offcanvas-left
+  {
+    left: -220px;
+  }
+
+  .row-offcanvas-left.active {
+    left: 0;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+  }
+}
+  
+   /* ----- wrapper  ----- */
+  
+ #wrapper {
+    width: 100%;
+    margin-top: 55px!important; 
+    background-color:#04B173; 
+}
+
+#page-wrapper {
+    padding: 0 15px;
+    min-height: 568px;
+     background-color:rgb(209, 212, 216);
+}
+
+  
+/* user image section */
+.user-section {
+    margin-top:20px;
+    font-size:22px;
+    background-color:rgb(83, 163, 163);
+}
+.user-section-inner {
+    height: 65px;
+width: 65px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+overflow: hidden;
+display: inline-block;
+float: left;
+margin-right: 15px;
+margin-top: 20px;
+}
+    .user-section-inner img {
+        margin-left: 2em;
+        
+    }
+#user-info {
+display: inline-block;
+padding: 15px;
+margin-bottom: 0px
+}
+  #user-info h3 {
+    
+    color: @brand-primary;
+    font-weight: bold;
+  
+  }
+  
+  #panel_i {
+    
+    background: brand-secondary;
+    color: blue;
+  
+  }
+ 
+
   /* ----- wallet Icon  ----- */
 
   .wallet {
@@ -125,6 +225,8 @@ header {
     color: red;
 }
   
+  
+
   
   /* ----- Registration Form ----- */
 

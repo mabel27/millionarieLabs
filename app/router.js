@@ -14,14 +14,15 @@ Router.map(function() {
       this.route('2');
       // add new blog route here.
     });
+    this.route('signUp');
+    this.route('signIn');
+   
   });
-
-  this.route('signUp');
-  this.route('signIn');
+  
+   this.route('profile');
 
   this.resource('users', function() {
     
   });
 });
-
 export default Router;
