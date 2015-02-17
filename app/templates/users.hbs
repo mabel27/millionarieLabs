@@ -54,15 +54,23 @@
           </ul>
         </li>
         <li><a href="#"><i class="fa fa-tachometer fa-3x"></i> Dashboard</a></li>
-        <li><a href="#"><i class="fa fa-credit-card fa-3x"></i> Account</a></li>
+        <li>{{#link-to 'users.account'}}<i class="fa fa-credit-card fa-3x"></i> Account {{/link-to}}</li>
       </ul>
     </div>
   </div>
 </div>
+      <div id="page-wrapper" class="page-wrapper col-md-10">
+  <div class="panel panel-default">
       {{outlet}}
-      
+
+    </div>
+          <br>
+  <br>
+      <br>
+  <br>
+</div>
       </div>
   
   </div>
-    
+  
 </html>

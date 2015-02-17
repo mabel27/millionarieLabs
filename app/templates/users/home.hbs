@@ -1,7 +1,5 @@
-{{!-- /app/templates/profile.hbs --}} {{outlet}}
+{{!-- /app/templates/users/profile.hbs --}} {{outlet}}
 
-<div id="page-wrapper" class="page-wrapper col-md-10">
-  <div class="panel panel-default">
     <div class="panel-heading">
       <i class="fa fa-home fa-2x">  <span class="kf"> HOME </span></i> 
     </div>
@@ -25,8 +23,8 @@
           <br>
                 <div class="panel panel-primary text-center no-boder">
                         <div class="m2 panel-body">
-                          <a href=""> <img src="assets/image/bank1.png" alt=""> 
-             <p>Go to your Accounts</p></a> 
+                          {{#link-to 'users.account'}} <img src="assets/image/bank1.png" alt=""> 
+             <p>Go to your Accounts {{/link-to}}</p>
                         </div>
                         <div class="panel-footer">
                             <span class="panel-eyecandy-title">Account
@@ -84,7 +82,6 @@
       </div>
     </div>
 
-  </div>
-</div>
+
 
 
