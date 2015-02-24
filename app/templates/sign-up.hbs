@@ -12,13 +12,23 @@
         <div class="wow slideInLeft" data-wow-delay="0.5s">
           <form {{ action "createUser" on="submit"}} role= "form">
             <h2><span class="kf">Create your New Account </span></h2>
+             
               {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}}
   
               {{input type= "email" class="form-control" placeholder="Email" value=email}}
+
       
               {{input type="password" class="form-control" placeholder="Password" value=password}}
               
+              password error: {{#each error in user.errors.password}}
+                <div class="error">
+                  {{error.message}}
+                </div>
+              {{/each}}
+              
+
               {{input type="password" class="form-control" placeholder=" Confirm Password" value=passwordConfirmation}}
+
             <button class="btn btn-primary btn-md" type="submit"><span class="kf">REGISTER</span> </button>
               <button class="btn btn-primary btn-md" type="reset" > <span class="kf">CANCEL </span></button>
           </form>
@@ -43,3 +53,4 @@
   </div>
 
 </section>
+
