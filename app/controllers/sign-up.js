@@ -14,7 +14,7 @@ export default Ember.Controller.extend({
       this.set('user.email',this.get('email'));
       this.set('user.password',this.get('password'));
       this.set('user.passwordConfirmation',this.get('passwordConfirmation'));
-      this.get('user').save().then(function(){alert("dwq");},function(response){alert("dwq");});
+      this.get('user').save().then(function(){alert("Sucessful ");},function(response){alert("dwq");});
     }
   }
 
