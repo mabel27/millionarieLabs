@@ -5,7 +5,8 @@ var User = DS.Model.extend({
   userName: DS.attr('string'),
   email: DS.attr('string'),
   password: DS.attr('string'),
-  passwordConfirmation: DS.attr('string')                     
+  passwordConfirmation: DS.attr('string'),
+  role: DS.attr('string')                   
   
 });
 
