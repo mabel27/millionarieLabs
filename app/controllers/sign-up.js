@@ -7,6 +7,9 @@ export default Ember.Controller.extend({
   email: '',
   password: '',
   passwordConfirmation: '',
+  role: ['parent','child'],
+  selectedRole: '',
+  
 //  user: this.store.createRecord('user',{}),
   actions: {
     createUser: function () {
@@ -14,7 +17,7 @@ export default Ember.Controller.extend({
       this.set('user.email',this.get('email'));
       this.set('user.password',this.get('password'));
       this.set('user.passwordConfirmation',this.get('passwordConfirmation'));
-      this.set('user.role', this.get('role'));
+      this.set('user.role', this.get('selectedRole'));
       this.get('user').save().then(function(){alert("Sucessful ");},function(response){alert("dwq");});
     }
   }

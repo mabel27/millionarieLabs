@@ -12,46 +12,49 @@
         <div class="wow slideInLeft" data-wow-delay="0.5s">
           <form {{ action "createUser" on="submit" }} role="form">
             <h2><span class="kf">Create New User</span></h2>
-            {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}} 
-            
-            {{#each error in user.errors.userName}}
+            {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}} {{#each error in user.errors.userName}}
+
+            <div class="alert alert-danger">
+              {{error.message}}.
+            </div>
+
+            {{/each}}
+
+            <div class="form-group">
+            {{view "Ember.Select" content=role  class="form-control" value=selectedRole}}
+            </div>
+           <!-- 
+              <select class="form-control">
+                <option>Parent</option>
+                <option>Child</option>
+              </select>
+            </div> -->
+
+
+            {{input type= "email" class="form-control" placeholder="Email" value=email}} {{#each error in user.errors.email}}
 
             <div class="alert alert-danger">
               {{error.message}}.
             </div>
 
             {{/each}} 
-            
-            {{input type= "email" class="form-control" placeholder="Email" value=email}} 
-            
-            {{#each error in user.errors.email}}
-
-            <div class="alert alert-danger">
-              {{error.message}}.
-            </div>
-
-            {{/each}} 
-            {{input type="text" class="form-control" placeholder="Role" value=role}} 
-            
             {{input type="password" class="form-control" placeholder="Password" value=password}} 
-           {{#each error in user.errors.password}}
+            {{#each error in user.errors.password}}
 
             <div class="alert alert-danger" role="alert">
               {{error.message}}.
             </div>
 
-            {{/each}} 
-            
-            {{input type="password" class="form-control" placeholder=" Confirm Password" value=passwordConfirmation}}
+            {{/each}} {{input type="password" class="form-control" placeholder=" Confirm Password" value=passwordConfirmation}}
 
             <button class="btn btn-primary btn-md" type="submit"><span class="kf">REGISTER</span> 
             </button>
             <button class="btn btn-primary btn-md" type="reset"> <span class="kf">CANCEL </span>
             </button>
             <br>
-          <br>{{#link-to 'signIn'}}Already In? Login{{/link-to}}
+            <br>{{#link-to 'signIn'}}Already In? Login{{/link-to}}
 
-            
+
           </form>
         </div>
       </div>
