@@ -21,15 +21,8 @@
             {{/each}}
 
             <div class="form-group">
-            {{view "Ember.Select" content=role  class="form-control" value=selectedRole}}
+              {{view "Ember.Select" content=role class="form-control" value=selectedRole}}
             </div>
-           <!-- 
-              <select class="form-control">
-                <option>Parent</option>
-                <option>Child</option>
-              </select>
-            </div> -->
-
 
             {{input type= "email" class="form-control" placeholder="Email" value=email}} {{#each error in user.errors.email}}
 
@@ -37,9 +30,7 @@
               {{error.message}}.
             </div>
 
-            {{/each}} 
-            {{input type="password" class="form-control" placeholder="Password" value=password}} 
-            {{#each error in user.errors.password}}
+            {{/each}} {{input type="password" class="form-control" placeholder="Password" value=password}} {{#each error in user.errors.password}}
 
             <div class="alert alert-danger" role="alert">
               {{error.message}}.
