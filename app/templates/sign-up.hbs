@@ -31,6 +31,7 @@
             </div>
 
             {{/each}} 
+            {{input type="text" class="form-control" placeholder="Role" value=role}} 
             
             {{input type="password" class="form-control" placeholder="Password" value=password}} 
            {{#each error in user.errors.password}}
