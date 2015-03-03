@@ -10,6 +10,7 @@ export default Ember.Route.extend(UnauthenticatedRouteMixin, {
  setupController: function(controller, model) {
     this._super(controller, model);
     controller.set('user', this.store.createRecord('user', {}));
+   
   }
   
 });

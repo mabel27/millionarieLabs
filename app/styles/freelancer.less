@@ -6,7 +6,7 @@ body {
 }
 
 p {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 p.small {
@@ -76,7 +76,7 @@ header {
 	background: @brand-success;
 	color: white;
 	.container {
-		padding-top: 100px;
+		padding-top: 50px;
 		padding-bottom: 50px;
 	}
 	img {
@@ -148,11 +148,7 @@ header {
 
   
 /* user image section */
- .user-section {
-    margin-top:20px;
-    font-size: 100px;
-   background: green;
- }
+
 .user-section-inner {
 -moz-border-radius: 3px;
 -webkit-border-radius: 3px;
@@ -197,6 +193,7 @@ margin-bottom: 0px
 .login form {
 
     padding: 10px 50px 40px 50px;
+    width: 40em;
     background:#f8f8f8 url(image/pattern.jpg) left top repeat;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -211,7 +208,7 @@ margin-bottom: 0px
 .login form h2 {
     margin-bottom: 25px;
     padding-bottom: 15px;
-   
+   border-bottom: 4px dotted @brand-primary;
     font-size: 30px;
     font-weight: 400;
     text-align: center;
@@ -224,7 +221,7 @@ margin-bottom: 0px
   /* ----- Registration Form ----- */
 
 .register form {
-    padding: 5px 50px 40px 50px;
+    padding: 30px 40px 30px 40px;
     background: #f8f8f8 url(image/pattern.jpg) left top repeat;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -293,7 +290,7 @@ margin-bottom: 0px
 @media(min-width:768px) {
 	header {
 		.container {
-			padding-top: 200px;
+			padding-top: 100px;
 			padding-bottom: 100px;
 		}
 		.intro-text {
@@ -349,7 +346,6 @@ margin-bottom: 0px
 
  .nav-pills, .nav-stacked{
 
-   background: @brand-secondary;
    font-weight: bold;
     color:black;
    
@@ -366,18 +362,9 @@ margin-bottom: 0px
 		}
 }
 
-.application {
-
- background: @brand-secondary;
-
-}
 
 
-.user{
 
-background: @brand-secondary;
- 
-}
 
 .m2 {
 
@@ -586,7 +573,13 @@ form .row:first-child .floating-label-form-group {
 }
 
 
+.panel-default > .panel-heading {
 
+background: @brand-head;
+  font-weight: bold;
+
+}
+ 
 
 /* ===========================
 --- About

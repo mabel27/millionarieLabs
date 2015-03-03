@@ -5,7 +5,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#side_bar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -20,7 +20,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <button type="button" class="btn btn-default navbar-btn">Sign out</button>
+          <button type="button" class="btn btn-primary navbar-btn">Sign out</button>
         </li>
       </ul>
     </div>
@@ -35,17 +35,20 @@
 
 <div class="user container col-md-12">
   <br>
-    <div class="row">
-      <div class="row-offcanvas row-offcanvas-left">
+  <!-- sidebar-collapse -->
+             <nav class="navbar-default navbar-static-side" role="navigation">
+               <div class="sidebar-collapse">
+    <div class="row" id="side_bar">
+      <div class="row-offcanvas row-offcanvas-left" id="side_bar">
         <div class="sidebar-offcanvas">
-        <div id="container-nav" class="col-md-2">
+        <div id="container-nav" class="col-md-2" >
           <!-- user image section-->
                       <div class="user-section-inner">
                             <img src="assets/image/user.png" alt="">  <h3> <span class="kf"> Jonny Deen </span> </h3>    
                       </div>
      
             <!--end user image section-->
-          <ul  class="nav nav-pills nav-stacked">
+          <ul  class="nav nav-pills nav-stacked" id="side_bar">
         <li> {{#link-to 'users.home'}}<i class=" fa fa-home fa-3x"></i> Home {{/link-to}}</li>
         <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa  fa-pencil-square-o fa-3x"></i> Profile<span class="caret"></span></a>
@@ -70,7 +73,9 @@
   <br>
 </div>
       </div>
+  </div>
+  </nav>
+
   
   </div>
-  
 </html>

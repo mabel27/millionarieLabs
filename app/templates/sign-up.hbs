@@ -36,7 +36,7 @@
             {{input type="password" class="form-control" placeholder="Password" value=password}} 
            {{#each error in user.errors.password}}
 
-            <div class="alert alert-danger">
+            <div class="alert alert-danger" role="alert">
               {{error.message}}.
             </div>
 

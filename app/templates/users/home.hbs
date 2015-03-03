@@ -1,86 +1,80 @@
 {{!-- /app/templates/users/profile.hbs --}} {{outlet}}
 
     <div class="panel-heading">
-      <i class="fa fa-home fa-2x">  <span class="kf"> HOME </span></i> 
+    <img src="assets/image/favorite.png" alt="">   <span class="kf"> Welcome </span>
     </div>
 
     <div class="register-container container ">
-      <div class="bg row ">
+  
         <div class="wallet col-md-3">
           <br>
-          <div class="panel panel-primary text-center no-boder">
-            <div class="m1 panel-body">
-             <a href=""> <img src="assets/image/mail.png" alt=""> 
-             <i class="fa fa-cog fa-spin"></i><p>3 New Messages </p></a> 
-            </div>
-            <div class="panel-footer">
-              <span class="panel-eyecandy-title"> Message</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="wallet col-md-3">
-          <br>
-                <div class="panel panel-primary text-center no-boder">
-                        <div class="m2 panel-body">
-                          {{#link-to 'users.account'}} <img src="assets/image/bank1.png" alt=""> 
-             <p>Go to your Accounts {{/link-to}}</p>
+                 <div class="panel panel-default">
+                        <div class="panel-heading home">
+                            <img src="assets/image/girl1.png" alt=""> Amy Activity
+                        </div>
+                        <div class="panel-body">
+                            <p class="small"> <img src="assets/image/dollar_coin.png" alt="">Present Balance: 200$</p>
+                            <p class="small"><img src="assets/image/not_available.png" alt="">Pending Withdrawals: -30$</p>
+                          <br>
+                           <input type="number"  class="form-control" placeholder="Amount to Deposit" >
+                          <br>
+                          <button type="submit" class="btn btn-primary">Deposit</button>
+                          <button type="submit" class="btn btn-danger">Withdraw</button>
                         </div>
                         <div class="panel-footer">
-                            <span class="panel-eyecandy-title">Account
-                            </span>
+                           <a href="#"> <img src="assets/image/computer.png" alt=""> See Account  </a>
                         </div>
                     </div>
-        </div>
+                </div>
+  
 
-        <div class=" col-md-4">
+                <div class="wallet col-md-3">
           <br>
-          <!-- Notifications-->
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <i class="fa fa-bell fa-fw"></i>Notifications Panel
-            </div>
+                 <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <img src="assets/image/girl2.png" alt=""> Likun Activity
+                        </div>
+                        <div class="panel-body">
+                            <p class="small"> <img src="assets/image/dollar_coin.png" alt="">Present Balance: 50$ </p>
+                            <p class="small"><img src="assets/image/not_available.png" alt="">Pending Withdraw: $</p>
+                          <br>
+                           <input type="number"  class="form-control" placeholder="Amount to Deposit" >
+                          <br>
+                          <button type="submit" class="btn btn-primary">Deposit</button>
+                          <button type="submit" class="btn btn-danger">Withdrawl</button>
+                        </div>
+                        <div class="panel-footer">
+                           <a href="#"> <img src="assets/image/computer.png" alt=""> See Account  </a>
+                        </div>
+                    </div>
+                </div>
+      
+     <div class="wallet col-md-3">
+          <br>
+                 <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <img src="assets/image/girl3.png" alt=""> Maddie Activity
+                        </div>
+                        <div class="panel-body">
+                            <p class="small"> <img src="assets/image/dollar_coin.png" alt="">Present Balance: 100$ </p>
+                            <p class="small"><img src="assets/image/not_available.png" alt="">Pending Withdraw: -10$</p>
+                          <br>
+                           <input type="number"  class="form-control" placeholder="Amount to Deposit" >
+                          <br>
+                          <button type="submit" class="btn btn-primary">Deposit</button>
+                          <button type="submit" class="btn btn-danger">Withdrawl</button>
+                        </div>
+                        <div class="panel-footer">
+                           <a href="#"> <img src="assets/image/computer.png" alt=""> See Account  </a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="m3 panel-body">
-              <div class="list-group">
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-comment fa-fw"></i>New Comment
-                  <span class="pull-right text-muted small"><em>4 minutes ago</em>
-                                    </span>
-                </a>
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-twitter fa-fw"></i>3 New Followers
-                  <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                    </span>
-                </a>
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-envelope fa-fw"></i>Message Sent
-                  <span class="pull-right text-muted small"><em>27 minutes ago</em>
-                                    </span>
-                </a>
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-tasks fa-fw"></i>New Task
-                  <span class="pull-right text-muted small"><em>43 minutes ago</em>
-                                    </span>
-                </a>
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-upload fa-fw"></i>Server Rebooted
-                  <span class="pull-right text-muted small"><em>11:32 AM</em>
-                                    </span>
-                </a>
 
-
-              </div>
-              <!-- /.list-group -->
-              <a href="#" class="btn btn-default btn-block">View All Alerts</a>
-            </div>
-
-          </div>
           <!--End Notifications-->
 
         </div>
-      </div>
-    </div>
+
 
 
 
