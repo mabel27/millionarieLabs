@@ -21,7 +21,7 @@
             {{/each}}
 
             <div class="form-group">
-              {{view "Ember.Select" content=role class="form-control" value=selectedRole}}
+              {{view "Ember.Select" content=role class="form-control"  value=selectedRole}}
             </div>
 
             {{input type= "email" class="form-control" placeholder="Email" value=email}} {{#each error in user.errors.email}}
