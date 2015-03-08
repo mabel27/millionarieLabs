@@ -13,6 +13,12 @@ p.small {
 	font-size: 16px;
 }
 
+.user{
+  
+ 
+  
+}
+
 a,
 a:hover,
 a:focus,
@@ -94,6 +100,13 @@ header {
 }
   
   
+  #container-nav {
+  
+  background: black;
+  
+  
+  }
+  
   /*
  * off Canvas sidebar
  * --------------------------------------------------
@@ -123,14 +136,9 @@ header {
 }
   
    /* ----- wrapper  ----- */
-  
- #wrapper {
-    width: 100%;
-    margin-top: 55px!important; 
-    background-color:#04B173; 
-}
 
-#page-wrapper {
+
+.page-wrapper col-md-10 {
     padding: 0 15px;
     min-height: 568px;
      background-color:rgb(209, 212, 216);
@@ -139,33 +147,9 @@ header {
   
 /* user image section */
 
-.user-section-inner {
--moz-border-radius: 3px;
--webkit-border-radius: 3px;
-border-radius: 3px;
-overflow: hidden;
-display: inline-block;
-float: left;
-margin-right: 15px;
-margin-top: 20px;
-}
-    .user-section-inner img {
-        margin-left: 2em;
-        
-    }
-#user-info {
-display: inline-block;
-padding: 15px;
-margin-bottom: 0px
-  
-}
-  #user-info h3 {
-    
-    color: @brand-primary;
-    font-weight: bold;
-  
-  }
-  
+/* user image section */
+
+
   
   /* ----- wallet Icon  ----- */
 
@@ -207,6 +191,7 @@ margin-bottom: 0px
  .register {
   
   padding-top: 3em;
+
   
   
   form {
@@ -328,17 +313,18 @@ margin-bottom: 0px
  .nav-pills, .nav-stacked{
 
    font-weight: bold;
-    color:black;
+   width: 15em;
+  
    
    li {
-    
+    font-size: 1.2em;
 			a:focus {
 				outline: none;
 			}
      
      a:hover {
 				outline: none;
-       background: #FFC719;
+       background: @brand-success;
 			}
 		}
 }
@@ -388,6 +374,49 @@ background: #E9EB4C;
 .navbar-default,
 .navbar-inverse {
 	border: none;
+}
+
+/* user image section */
+.user-section {
+    
+    font-size:1.2em;
+  width: 12.5em;
+  height: 5em;
+    background-color:@brand-title;
+}
+.user-section-inner {
+    height: 65px;
+width: 65px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+overflow: hidden;
+display: inline-block;
+float: left;
+margin-right: 15px;
+margin-top: 20px;
+}
+    .user-section-inner img {
+        margin-left:10px;
+        width:60px;
+        height:60px;
+        
+    }
+.user-info {
+    display: block;
+  font-weight: bold;
+    color:white !important;
+display: inline-block;
+padding: 15px;
+margin-bottom: 0px
+}
+.user-text-online {
+    font-size:1em;
+    color:#fff
+}
+.user-circle-online {
+    width: 15px!important;
+    height: 15px!important;
 }
 
 section {

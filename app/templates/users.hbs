@@ -1,5 +1,4 @@
 {{!-- /app/templates/users.hbs --}}
-<html class="application">
 <header>
 <nav class="user navbar navbar-default">
   <div class="container-fluid">
@@ -31,9 +30,9 @@
 
 </header>
 <!-- navbar side -->
+<body>
 
-
-<div class="user container col-md-12">
+<div class="user col-md-12">
   <br>
   <!-- sidebar-collapse -->
              <nav class="navbar-default navbar-static-side" role="navigation">
@@ -43,10 +42,24 @@
         <div class="sidebar-offcanvas">
         <div id="container-nav" class="col-md-2" >
           <!-- user image section-->
-                      <div class="user-section-inner">
-                            <img src="assets/image/user.png" alt="">  <h3> <span class="kf"> Jonny Deen </span> </h3>    
+          <br>
+                                  <div class="user-section">
+                            <div class="user-section-inner">
+                                <img src="assets/image/team/mabel.jpg" alt="" >
+                            </div>
+                            <div class="user-info">
+                                <div><strong>27mabel</strong></div>
+                                <div class="user-text-online">
+                                    <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
+                                </div>
+                            </div>
+                        </div>
+          
+          
+                     <!-- <div class="user-section-inner">
+      <img src="assets/image/team/mabel.jpg" alt="" height="60" width="60">  <h3> <span class="kf"> 27mabel </span> </h3>    
                       </div>
-     
+     -->
             <!--end user image section-->
           <ul  class="nav nav-pills nav-stacked" id="side_bar">
         <li> {{#link-to 'users.home'}}<i class=" fa fa-home fa-3x"></i> Home {{/link-to}}</li>
@@ -62,15 +75,15 @@
     </div>
   </div>
 </div>
-      <div id="page-wrapper" class="page-wrapper col-md-10">
+      <br>
+      <div class="page-wrapper col-md-10">
   <div class="panel panel-default">
       {{outlet}}
 
     </div>
           <br>
-  <br>
-      <br>
-  <br>
+
+
 </div>
       </div>
   </div>
@@ -78,4 +91,4 @@
 
   
   </div>
-</html>
+  </body>
