@@ -20,6 +20,20 @@ export default Ember.Controller.extend({
       this.set('user.role', this.get('selectedRole'));
       this.get('user').save().then(function(){alert("Sucessful ");},function(response){alert("dwq");});
     }
-  }
+  },
+  typeSelected: function()
+  {
 
+    var email = $('#email');
+
+    if(this.selectedRole === 'parent')
+    {
+     email.show();
+  
+    }
+    else 
+    {
+      email.hide();
+    }
+  }.observes('selectedRole')
 });
