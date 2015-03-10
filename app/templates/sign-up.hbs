@@ -24,7 +24,7 @@
               {{view "Ember.Select" content=role class="form-control"  value=selectedRole}}
             </div>
 
-            {{input type= "email" class="form-control" placeholder="Email" value=email}} {{#each error in user.errors.email}}
+            {{input type= "email" id="email" class="form-control" placeholder="Email" value=email}} {{#each error in user.errors.email}}
 
             <div class="alert alert-danger">
               {{error.message}}.
