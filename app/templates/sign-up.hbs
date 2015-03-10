@@ -1,7 +1,7 @@
 {{!-- /app/templates/sign-up.hbs --}}
 <header>
 
-  <div class="register-container container">
+  <div class="register-container ">
     <div class="row">
       <div class="wow bounceInUp">
         <div class="wallet col-md-5">
@@ -11,7 +11,8 @@
       <div class="register col-md-6">
         <div class="wow slideInLeft" data-wow-delay="0.5s">
           <form {{ action "createUser" on="submit" }} role="form">
-            <h2><span class="kf">Create New User</span></h2>
+            <h2 id="security" class="kf">Create a new User! </h2>  
+            <hr class="star-primary"> 
             {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}} {{#each error in user.errors.userName}}
 
             <div class="alert alert-danger">
@@ -37,12 +38,24 @@
             </div>
 
             {{/each}} {{input type="password" class="form-control" placeholder=" Confirm Password" value=passwordConfirmation}}
-
+            <p id="security" class="kf">Security Questions</p>
+            <hr class="star-primary">
+            <div class="form-group">
+              {{view "Ember.Select" content=role class="form-control"  value=selectedRole}}
+            </div>
+  
+             {{input type= "text" class="form-control" placeholder="Answer question 1" value=answer1}} 
+        
+            <div class="form-group">
+              {{view "Ember.Select" content=role class="form-control" arial-describedby="sizing-addon1"  value=selectedRole}}
+            </div>
+             {{input type= "text" class="form-control" placeholder="Answer question 2" value=answer2}} 
+            
             <button class="btn btn-primary btn-md" type="submit"><span class="kf">REGISTER</span> 
             </button>
             <button class="btn btn-primary btn-md" type="reset"> <span class="kf">CANCEL </span>
             </button>
-            <br>
+    
             <br>{{#link-to 'signIn'}}Already In? Login{{/link-to}}
 
 
