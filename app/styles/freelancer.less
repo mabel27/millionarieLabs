@@ -13,18 +13,14 @@ p.small {
 	font-size: 16px;
 }
 
-.user{
-  
- 
-  
-}
+
 
 a,
 a:hover,
 a:focus,
 a:active,
 a.active {
-	color: @brand-primary;
+	color: black;
 	outline: none;
 }
 
@@ -32,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
+  color: @brand-title;
 }
 
 hr.star-light,
@@ -99,14 +96,7 @@ header {
   overflow-x:hidden;
 }
   
-  
-  #container-nav {
-  
-  background: black;
-  
-  
-  }
-  
+
   /*
  * off Canvas sidebar
  * --------------------------------------------------
@@ -135,22 +125,9 @@ header {
   }
 }
   
-   /* ----- wrapper  ----- */
 
 
-.page-wrapper col-md-10 {
-    padding: 0 15px;
-    min-height: 568px;
-     background-color:rgb(209, 212, 216);
-}
-
-  
-/* user image section */
-
-/* user image section */
-
-
-  
+    
   /* ----- wallet Icon  ----- */
 
   .wallet {
@@ -310,14 +287,16 @@ header {
 	}
 }
 
- .nav-pills, .nav-stacked{
-
+ #side_bar1 {
+   
    font-weight: bold;
    width: 15em;
+   margin-top: -25px;
   
    
    li {
     font-size: 1.2em;
+    
 			a:focus {
 				outline: none;
 			}
@@ -326,7 +305,45 @@ header {
 				outline: none;
        background: @brand-success;
 			}
+     
+          a:active {
+			outline: none;	
+       background: @brand-title;
+			}
 		}
+
+}
+
+ .link1  {
+
+ background: @brand-primary;
+  outline: none;
+    
+  
+  
+  
+}
+
+ .link1 a:hover { 
+    background-color: @brand-title;
+}
+
+
+ .link2  {
+
+ background: @brand-new;
+  outline: none;
+  
+}
+  
+
+ .link2 a:hover { 
+    background-color: @brand-success; 
+}
+
+ .nav-pills, .nav-stacked{
+
+   
 }
 
 #security {
@@ -338,24 +355,113 @@ color: @brand-title;
 
 
 
-.m2 {
+.info {
+  
+  img{
+  
+float: left;
+  
+  }
+  
+  div{
+    background: @child1;
+    color: white;
+    text-align: center;
+    padding-top: 0.5em;
+  padding-bottom: 0.5em;
+    
+    a{
+    
+    color: white;
+    
+    }
+  
+  
+  }
 
-background: #FF7032;
+
   font-weight: bold;
-
+ 
 }
 
-.m1 {
+.info1 {
 
-background: #47B042;
  font-weight: bold;
+  .img1{
+  
+float: left;
+  }
+  
+  img{
+  
+  padding-right: 0.5em;
+  margin-left: 0.5em;
+  
+  }
+   div{
+    background: @child2;
+    color: white;
+    text-align: center;
+    padding-top: 0.5em;
+  padding-bottom: 0.5em;
+    
+    a{
+    
+    color: white;
+      
+    
+    }
+     
+     a:hover {
+     
+       
+       background: @brand-success;
+    
+     
+     }
+  
+  
+  }
 }
 
-.m3 {
+.info2  {
 
-background: #FFC719;
- font-weight: bold;
-
+font-weight: bold;
+  .img1{
+  
+float: left;
+  }
+  
+  img{
+  
+  padding-right: 0.5em;
+  margin-left: 0.5em;
+  
+  }
+   div{
+    background: @child3;
+    color: white;
+    text-align: center;
+    padding-top: 0.5em;
+  padding-bottom: 0.5em;
+    
+    a{
+    
+    color: white;
+      
+    
+    }
+     
+     a:hover {
+     
+       
+       background: @brand-success;
+    
+     
+     }
+  
+  
+  }
 }
 
 
@@ -366,9 +472,32 @@ background: #E9EB4C;
   
 }
 
-.info {padding-left: 4em; }
+.info {padding-left: 1em; }
 
 
+ #nav_child{
+    margin-left: 2em;
+ li{
+ 
+   padding-right: 10em;
+ }
+   
+   a{
+   
+   width: 10em;
+   
+   
+   }
+
+   a:hover {
+       outline: none;
+       background: @brand-success;
+    
+     
+			}
+ 
+ 
+ }
 
 
 .navbar-default,
@@ -380,9 +509,8 @@ background: #E9EB4C;
 .user-section {
     
     font-size:1.2em;
-  width: 12.5em;
-  height: 5em;
-    background-color:@brand-title;
+ padding-bottom: 20px;
+    background-color: @user;
 }
 .user-section-inner {
     height: 65px;
@@ -398,6 +526,7 @@ margin-top: 20px;
 }
     .user-section-inner img {
         margin-left:10px;
+      
         width:60px;
         height:60px;
         
@@ -449,6 +578,32 @@ section.success {
 	background: darken(@brand-primary, 5%);
 	color: white;
 }
+
+   /* ----- wrapper  ----- */
+
+.navbar-default {
+  
+  background: @user;
+}
+
+
+.page-wrapper {
+    margin-top: -25px;
+}
+
+.user{
+  
+ background: @user;
+  margin-top: -20px;
+  
+}
+
+
+  .table {
+  
+    padding-left: -2em;
+  
+  }
 
 @media(max-width:767px) {
 	section {

@@ -1,4 +1,4 @@
-{{!-- /app/templates/users.hbs --}}
+{{!-- /app/templates/child.hbs --}}
 <header>
   <nav class="navbar navbar-default">
 
@@ -40,36 +40,24 @@
   <div class="user col-md-12">
     <br>
     <!-- sidebar-collapse -->
-    <nav class="navbar-default navbar-static-side" role="navigation">
-      <div class="sidebar-collapse">
-        <div class="row" id="side_bar">
-          <div class="row-offcanvas row-offcanvas-left" id="side_bar">
-            <div class="sidebar-offcanvas">
-              <div id="container-nav" class="col-md-2">
+              <div class="col-md-12">
+                <nav class="navbar-default " role="navigation">
+<ul class="nav nav-pills" id="nav_child">
+   <li class="link1">{{#link-to 'users.home'}}<img src="assets/image/bank14.png" height="50" width="50"> Home {{/link-to}}</li>
+                  <li class="link2">{{#link-to 'users.profile'}}<img src="assets/image/verified19.png" height="50" width="50">Chores {{/link-to}}</li>
 
-                <br>
-                <ul class="nav nav-pills nav-stacked" id="side_bar1">
-                  <li>{{#link-to 'users.home'}}<i class=" fa fa-home fa-3x"></i> Home {{/link-to}}</li>
-                  <li>{{#link-to 'users.profile'}} <i class="fa  fa-pencil-square-o fa-3x"></i> Profile {{/link-to}}</li>
-
-                  <li><a href="#"><i class="fa fa-tachometer fa-3x"></i> Dashboard </a></li>
-                  <li>{{#link-to 'users.account'}}<i class="fa fa-credit-card fa-3x"></i> Account {{/link-to}}</li>
-                </ul>
+                  <li class="link1"><a href="#"> <img src="assets/image/objective.png" height="50" width="50">Wish List</a></li>
+                  <li class="link2">{{#link-to 'users.account'}}<img src="assets/image/recognition6.png" height="50" width="50">Mission {{/link-to}}</li>
+</ul>
+                </nav>           <br>
+               
             </div>
-          </div>
-          </div>
-        
+        </div>
           <br>
-          <div class="page-wrapper col-md-10">
-            <div class="panel panel-default">
+          <div class="page-wrapper col-md-12">
+           
               {{outlet}}
-
-            </div>
-            <br>
         
 </div>
-</div>
-          </div>
-    </nav>
-  </div>
+      
 </body>
