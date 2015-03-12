@@ -6,7 +6,11 @@ var User = DS.Model.extend({
   email: DS.attr('string'),
   password: DS.attr('string'),
   passwordConfirmation: DS.attr('string'),
-  role: DS.attr('string')                   
+  role: DS.attr('string'),      
+  questionOne: DS.attr('number'),
+  answerOne: DS.attr('string'),
+  questionTwo: DS.attr('number'),
+  answerTwo: DS.attr('string')             
   
 });
 
