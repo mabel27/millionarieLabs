@@ -38,19 +38,32 @@
             </div>
 
             {{/each}} {{input type="password" class="form-control" placeholder=" Confirm Password" value=passwordConfirmation}}
-            <p id="security" class="kf">Security Questions</p>
+            <div id="SecuritySection">
+            <p class="kf">Security Questions</p>
             <hr class="star-primary">
             <div class="form-group">
-              {{view "Ember.Select" content=role class="form-control"  value=selectedRole}}
+              {{view "Ember.Select" 
+                    content=questionSelection 
+                    prompt="Please select a question" 
+                    class="form-control" 
+                    optionLabelPath="content.description"
+                    optionValuePath="content.id"
+                    value=selectedQuestion1}}
             </div>
   
-             {{input type= "text" class="form-control" placeholder="Answer question 1" value=answer1}} 
+             {{input type= "text" class="form-control" placeholder="Answer question 1" value=answerQuestion1}} 
         
             <div class="form-group">
-              {{view "Ember.Select" content=role class="form-control" arial-describedby="sizing-addon1"  value=selectedRole}}
+              {{view "Ember.Select" 
+                  content=questionSelection 
+                  prompt="Please select a question" 
+                  class="form-control"  
+                  optionLabelPath="content.description"
+                  optionValuePath="content.id"
+                  value=selectedQuestion2}}
             </div>
-             {{input type= "text" class="form-control" placeholder="Answer question 2" value=answer2}} 
-            
+             {{input type= "text" class="form-control" placeholder="Answer question 2" value=answerQuestion2}} 
+            </div>
             <button class="btn btn-primary btn-md" type="submit"><span class="kf">REGISTER</span> 
             </button>
             <button class="btn btn-primary btn-md" type="reset"> <span class="kf">CANCEL </span>
