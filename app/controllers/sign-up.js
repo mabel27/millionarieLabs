@@ -9,8 +9,8 @@ export default Ember.Controller.extend({
   passwordConfirmation: '',
   role: ['parent','child'],
   selectedRole: '',
-  selectedQuestion1: -1,
-  selectedQuestion2: -1,
+  selectedQuestion1: null,
+  selectedQuestion2: null,
   answerQuestion1: '',
   answerQuestion2: '',
   
@@ -24,9 +24,9 @@ export default Ember.Controller.extend({
       this.set('user.password',this.get('password'));
       this.set('user.passwordConfirmation',this.get('passwordConfirmation'));
       this.set('user.role', this.get('selectedRole'));
-      this.set('user.questionOne', this.get('selectedQuestion1') || -1);
+      this.set('user.questionOne', this.get('selectedQuestion1'));
       this.set('user.answerOne', this.get('answerQuestion1') || '');
-      this.set('user.questionTwo', this.get('selectedQuestion2') || -1);
+      this.set('user.questionTwo', this.get('selectedQuestion2'));
       this.set('user.answerTwo', this.get('answerQuestion2') || '');
       this.get('user').save().then(function(){alert("Sucessful ");},function(response){console.log(response);});
     }
