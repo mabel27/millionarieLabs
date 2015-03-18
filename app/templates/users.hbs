@@ -40,36 +40,33 @@
   <div class="user col-md-12">
     <br>
     <!-- sidebar-collapse -->
-    <nav class="navbar-default navbar-static-side" role="navigation">
-      <div class="sidebar-collapse">
-        <div class="row" id="side_bar">
-          <div class="row-offcanvas row-offcanvas-left" id="side_bar">
-            <div class="sidebar-offcanvas">
-              <div id="container-nav" class="col-md-2">
+    <div class="col-md-12">
 
-                <br>
-                <ul class="nav nav-pills nav-stacked" id="side_bar1">
-                  <li>{{#link-to 'users.home'}}<i class=" fa fa-home fa-3x"></i> Home {{/link-to}}</li>
-                  <li>{{#link-to 'users.profile'}} <i class="fa  fa-pencil-square-o fa-3x"></i> Profile {{/link-to}}</li>
+      <nav class="navbar-default " role="navigation">
+        <ul class="nav nav-tabs nav-justified">
+          <li class="link1">{{#link-to 'users.home'}}
+            <img src="assets/image/bank14.png" height="50" width="50">Home {{/link-to}}</li>
+          <li class="link2">{{#link-to 'users.account'}}
+            <img src="assets/image/dice18.png" height="50" width="50">Kids Account {{/link-to}}</li>
 
-                  <li><a href="#"><i class="fa fa-tachometer fa-3x"></i> Dashboard </a></li>
-                  <li>{{#link-to 'users.account'}}<i class="fa fa-credit-card fa-3x"></i> Account {{/link-to}}</li>
-                </ul>
-            </div>
-          </div>
-          </div>
-        
-          <br>
-          <div class="page-wrapper col-md-10">
-            <div class="panel panel-default">
-              {{outlet}}
+          <li class="link1">
+            <a href="#">
+              <img src="assets/image/archive35.png" height="50" width="50">Education Tips</a>
+          </li>
+          <li class="link2">{{#link-to 'users.profile'}}
+            <img src="assets/image/settings48.png" height="50" width="50">Settings {{/link-to}}</li>
+        </ul>
+      </nav>
+      <br>
 
-            </div>
-            <br>
-        
-</div>
-</div>
-          </div>
-    </nav>
+    </div>
   </div>
+
+
+  <br>
+  <div class="page-wrapper col-md-12">
+    <br>{{outlet}}
+
+  </div>
+
 </body>

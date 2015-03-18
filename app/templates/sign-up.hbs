@@ -1,18 +1,55 @@
 {{!-- /app/templates/sign-up.hbs --}}
 <header>
 
-  <div class="register-container ">
-    <div class="row">
-      <div class="wow bounceInUp">
-        <div class="wallet col-md-5">
-          <img src="assets/image/wallet8.png" alt="">
-        </div>
+  <nav class="navbar navbar-default">
+
+    <div class="container-fluid">
+
+
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#side_bar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand kf" style="cursor:pointer"> <i class="ki k-tree"></i>Millionaire Labs</a>
+
       </div>
-      <div class="register col-md-6">
-        <div class="wow slideInLeft" data-wow-delay="0.5s">
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button type="button" class="btn btn-primary navbar-btn">Sign out</button>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+
+</header>
+
+<body>
+
+  <div class="register-container ">
+    <div class="row ">
+      <div class="wow pulse">
+        <div class="wallet col-xs-2 col-md-4">
+
+        </div>
+
+      </div>
+      <div class="register col-xs-8 col-md-8">
+        <div class="wow fadeInDown" data-wow-delay="0.3s">
           <form {{ action "createUser" on="submit" }} role="form">
-            <h2 id="security" class="kf">Create a new User! </h2>  
-            <hr class="star-primary"> 
+            <h2  class="kf">Create a new User! </h2> 
             {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}} {{#each error in user.errors.userName}}
 
             <div class="alert alert-danger">
@@ -22,7 +59,7 @@
             {{/each}}
 
             <div class="form-group">
-              {{view "Ember.Select" content=role class="form-control" prompt="Role"  value=selectedRole}}
+              {{view "Ember.Select" content=role class="form-control" prompt="Role" value=selectedRole}}
             </div>
 
             {{input type= "email" id="email" class="form-control" placeholder="Email" value=email}} {{#each error in user.errors.email}}
@@ -39,83 +76,68 @@
 
             {{/each}} {{input type="password" class="form-control" placeholder=" Confirm Password" value=passwordConfirmation}}
             <div id="SecuritySection">
-            <p class="kf">Security Questions</p>
-            <hr class="star-primary">
-            <div class="form-group">
-              {{view "Ember.Select" 
-                    content=questionSelection 
-                    prompt="Please select a question" 
-                    class="form-control" 
-                    optionLabelPath="content.description"
-                    optionValuePath="content.id"
-                    value=selectedQuestion1}}
+              <p class="kf">Security Questions</p>
+              <hr class="star-primary">
+              <div class="form-group">
+                {{view "Ember.Select" content=questionSelection prompt="Please select a question" class="form-control" optionLabelPath="content.description" optionValuePath="content.id" value=selectedQuestion1}}
+              </div>
+
+              {{input type= "text" class="form-control" placeholder="Answer question 1" value=answerQuestion1}}
+
+              <div class="form-group">
+                {{view "Ember.Select" content=questionSelection prompt="Please select a question" class="form-control" optionLabelPath="content.description" optionValuePath="content.id" value=selectedQuestion2}}
+              </div>
+              {{input type= "text" class="form-control" placeholder="Answer question 2" value=answerQuestion2}}
             </div>
-  
-             {{input type= "text" class="form-control" placeholder="Answer question 1" value=answerQuestion1}} 
-        
-            <div class="form-group">
-              {{view "Ember.Select" 
-                  content=questionSelection 
-                  prompt="Please select a question" 
-                  class="form-control"  
-                  optionLabelPath="content.description"
-                  optionValuePath="content.id"
-                  value=selectedQuestion2}}
-            </div>
-             {{input type= "text" class="form-control" placeholder="Answer question 2" value=answerQuestion2}} 
-            </div>
+              
             <button class="btn btn-primary btn-md" type="submit"><span class="kf">REGISTER</span> 
             </button>
             <button class="btn btn-primary btn-md" type="reset"> <span class="kf">CANCEL </span>
-            </button>
+            </button>  
             <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
-    
-            <br>{{#link-to 'signIn'}}Already In? Login{{/link-to}}
+              Launch demo modal
+            </button>
+            <br>
+            <p>{{#link-to 'signIn'}}Already In? Login{{/link-to}}</p>
 
 
           </form>
         </div>
       </div>
-      
-                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title kf"  id="myModalLabel"> <i class="fa fa-users fa-2x"></i>Create your family</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="form-group">
-        <label>Create a Family Username</label>
-        <input class="form-control" placeholder="Family UserName">
-      </div>
-      <!-- search section-->
-      <label>Add your family members</label>
-      <div class="input-group custom-search-form">
 
-        <input type="text" class="form-control" placeholder="Search family members">
-        <span class="input-group-btn">
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title kf" id="myModalLabel"> <i class="fa fa-users fa-2x"></i>Create your family</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label>Create a Family Username</label>
+                <input class="form-control" placeholder="Family UserName">
+              </div>
+              <!-- search section-->
+              <label>Add your family members</label>
+              <div class="input-group custom-search-form">
+
+                <input type="text" class="form-control" placeholder="Search family members">
+                <span class="input-group-btn">
                                 <button class="btn btn-default" type="button">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
       </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-      
+
     </div>
   </div>
 
-
-</header>
-
-
-
+</body>

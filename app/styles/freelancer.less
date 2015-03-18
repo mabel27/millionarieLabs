@@ -22,6 +22,7 @@ a:active,
 a.active {
 	color: black;
 	outline: none;
+  font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -128,71 +129,7 @@ header {
 
 
     
-  /* ----- wallet Icon  ----- */
-
-  .wallet {
-    text-align: center;
-    color: @brand-title;
-    padding-top: 5em;
-  }
-
-.wallet img { 
-  margin-right: 5px; 
-}
   
-  
-  
-/* ----- login Form ----- */  
-  
-.login form {
-
-    padding: 5px 30px 5px 30px;
-    width: 40em;
-    background:#f8f8f8 url(image/pattern.jpg) left top repeat;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 8px;
-    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
-    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
-    
-
-}  
-
-  
-  
-
-  
-  /* ----- Registration Form ----- */
-
- .register {
-  
-  padding-top: 3em;
-
-  
-  
-  form {
-    padding: 5px 30px 5px 30px;
-    background: #f8f8f8 url(image/pattern.jpg) left top repeat;
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
-    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
-    
-}
-
-}
-  
-  .form-control  {
-    font-size: 1.2em;
-    margin-bottom: 1em;
-    color: @brand-primary;
-    font-weight: bold;
-  
-  }
-
     .video {
         
         position: relative;
@@ -314,12 +251,72 @@ header {
 
 }
 
+
+ .circle {
+   
+   #c{
+   
+   background:  @brand-secondary; 
+   width: 140px; 
+   height: 140px;
+   
+   } 
+   
+   #c:hover {
+   
+  background:@brand-success; 
+   
+   }
+   
+   #c_btn{
+   align-content: center;
+   background:  @brand-new;
+   font-weight: bold;
+     outline-color: @brand-new;
+
+   }
+   
+    #c_btn:hover {
+   
+  background:@brand-success; 
+   
+    }
+   img{
+  
+float: left;
+    
+  
+  }
+   
+   h3 {
+   
+   color:  @brand-secondary;
+   font-weight: bold;
+   
+   }
+   
+   h3:hover{
+   
+     color: @brand-success;
+   
+   }
+ 
+  
+ 
+ 
+ 
+ }
+
  .link1  {
 
  background: @brand-primary;
-  outline: none;
-    
   
+    
+  a:active {
+    
+   background:@brand-title;
+  
+  }
   
   
 }
@@ -346,11 +343,7 @@ header {
    
 }
 
-#security {
 
-color: @brand-title;
-
-}
 
 
 
@@ -498,6 +491,129 @@ background: #E9EB4C;
  
  
  }
+
+
+
+/* ----- wallet Icon  ----- */
+
+  .wallet {
+    text-align: center;
+    color: @brand-title;
+    padding-top: 25em;
+    background: url(image/businessman228.png) no-repeat;
+
+    background-size:contain;
+  }
+
+
+ .lock {
+    padding-top: 25em;
+    background: url(image/locked56.png) no-repeat;
+    background-size:contain;
+  }
+
+
+ #h_intro {
+
+width: 5em;
+text-align: center;
+   margin-left: 1em;
+
+}
+  
+  
+  
+/* ----- login Form ----- */  
+  
+.login {
+  
+  
+  h2, p{
+  
+    text-align: center;
+  
+  
+  }
+form {
+    padding: 5px 30px 5px 30px;
+    
+    background:#f8f8f8 url(image/pattern.jpg) left top repeat;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 8px;
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    
+}
+  
+}  
+
+  
+  
+
+  
+  /* ----- Registration Form ----- */
+
+ .register {
+  
+  padding-top: 3em;
+
+    h2, p{
+  
+    text-align: center;
+  
+  
+  }
+  
+  form {
+    
+    padding: 5px 30px 5px 30px;
+    background: #f8f8f8 url(image/pattern.jpg) left top repeat;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    
+}
+
+}
+  
+.register_signin {
+  
+  padding-top: 3em;
+
+    
+  
+  form {
+    
+    padding: 5px 30px 5px 30px;
+    
+    background: #f8f8f8 url(image/pattern.jpg) left top repeat;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    
+}
+
+}
+
+
+
+  .form-control  {
+
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: @brand-primary;
+    font-weight: bold;
+  
+  }
+
 
 
 .navbar-default,

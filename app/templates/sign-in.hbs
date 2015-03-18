@@ -1,16 +1,55 @@
 {{!-- /app/templates/sign-in.hbs --}}
-
 <header>
+  
+  <nav class="navbar navbar-default">
 
-  <div class="login-container container">
-    <div class="row">
+    <div class="container-fluid">
 
-      <div class="wallet col-md-5">
-        <img src="assets/image/credit35.png" alt="">
+
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#side_bar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand kf" style="cursor:pointer"> <i class="ki k-tree"></i>Millionaire Labs</a>
+
       </div>
-      <div class="login col-md-6">
 
-        <form {{ action "authenticate" on="submit" }} role="form">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button type="button" class="btn btn-primary navbar-btn">Sign up</button>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  
+  </header>
+
+<body>
+
+
+
+  <div class="register-container ">
+    <div class="row">
+<div class="wow pulse">
+      <div class="lock col-xs-2 col-md-4">
+        
+      </div>
+      </div>
+      <div class="register_signin col-xs-8 col-md-4">
+
+        <form class="login" {{ action "authenticate" on="submit" }} role="form">
           <h2><span class="kf">Login </span></h2>
           {{!-- {{input type= "text" class="form-control" placeholder="User Name" value=userName}} 
           
@@ -27,20 +66,23 @@
                   
             
           </div>
-          <button class="btn btn-primary btn-md" type="submit"><span class="kf">Sign In</span> 
+          <button id="login_btn" class="btn btn-primary btn-md" type="submit"><span class="kf">Sign In</span> 
           </button>
           <br>
-          <br>{{#link-to 'signUp'}}Not in the lab? Register now{{/link-to}}
+         <p> <i class=" fa fa-lock ">{{#link-to 'signUp'}} Lost Password? {{/link-to}}</i></p>
+          <p>{{#link-to 'signUp'}}Not in the lab? Register now{{/link-to}}</p>
           <br>
-          <br><i class=" fa fa-lock ">{{#link-to 'signUp'}} Lost Password? {{/link-to}}</i>
+          <br>
 
         </form>
       </div>
     </div>
   </div>
-
+</body>
 <br>
-  <br>
-  <br>
+<br>
+<br>
 
-</header>
+   
+    
+    

@@ -16,7 +16,7 @@
         </button>
 
         <a class="navbar-brand kf" style="cursor:pointer"> <i class="ki k-tree"></i>Millionaire Labs</a>
-
+<p class="navbar-text">Signed in as Mark Otto</p>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,24 +40,33 @@
   <div class="user col-md-12">
     <br>
     <!-- sidebar-collapse -->
-              <div class="col-md-12">
-                <nav class="navbar-default " role="navigation">
-<ul class="nav nav-pills" id="nav_child">
-   <li class="link1">{{#link-to 'users.home'}}<img src="assets/image/bank14.png" height="50" width="50"> Home {{/link-to}}</li>
-                  <li class="link2">{{#link-to 'users.profile'}}<img src="assets/image/verified19.png" height="50" width="50">Chores {{/link-to}}</li>
+    <div class="col-md-12">
 
-                  <li class="link1"><a href="#"> <img src="assets/image/objective.png" height="50" width="50">Wish List</a></li>
-                  <li class="link2">{{#link-to 'users.account'}}<img src="assets/image/recognition6.png" height="50" width="50">Mission {{/link-to}}</li>
-</ul>
-                </nav>           <br>
-               
-            </div>
-        </div>
-          <br>
-          <div class="page-wrapper col-md-12">
-           
-              {{outlet}}
-        
-</div>
-      
+      <nav class="navbar-default " role="navigation">
+        <ul class="nav nav-tabs nav-justified">
+          <li class="link1">{{#link-to 'users.home'}}
+            <img src="assets/image/bank14.png" height="50" width="50">Home {{/link-to}}</li>
+          <li class="link2">{{#link-to 'users.profile'}}
+            <img src="assets/image/verified19.png" height="50" width="50">Chores {{/link-to}}</li>
+
+          <li class="link1">
+            <a href="#">
+              <img src="assets/image/objective.png" height="50" width="50">Wish List</a>
+          </li>
+          <li class="link2">{{#link-to 'users.account'}}
+            <img src="assets/image/recognition6.png" height="50" width="50">Mission {{/link-to}}</li>
+        </ul>
+      </nav>
+      <br>
+
+    </div>
+  </div>
+
+
+  <br>
+  <div class="page-wrapper col-md-12">
+    <br>{{outlet}}
+
+  </div>
+
 </body>
