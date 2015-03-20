@@ -1,62 +1,54 @@
 {{!-- /app/templates/users/profile.hbs --}}
 
-<div class="panel-heading">
-  <h3><img src="assets/image/user_edit.png" alt="">   <span class="kf">Edit Profile </span> </h3>
-</div>
-
 <div class="register-container container">
-  <div class="register col-md-6">
+
+  <div class="col-md-2">
+    <img src="assets/image/settings48.png" height="180" width="180">
+  </div>
+
+  <div class="register  col-md-5">
+    <br>
+    <form id="info">
+       <img src="assets/image/check53.png" height="50" width="50"><h3 class="kf">Personal Information</h3>
+      <p>Name:</p>
+      <p>UserName:</p>
+      <p>Email:</p>
+      <p>Role:</p>
+      <p>Family Name:</p>
+      <p>Family Members:</p>
+    </form>
+  </div>
+
+
+  <div class="register col-md-5">
     <br>
 
     <form role="form">
 
       <div class="form-group">
-        <label>Create a Family Username</label>
-        <input class="form-control" placeholder="Family UserName">
+        <label>Name:</label>
+        <input class="form-control" placeholder="Name">
       </div>
-      <!-- search section-->
-      <label>Add your family members</label>
-      <div class="input-group custom-search-form">
-
-        <input type="text" class="form-control" placeholder="Search family members">
-        <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
+      <div class="form-group">
+        <label>UserName:</label>
+        <input class="form-control" placeholder="UserName">
       </div>
-      <!--end search section-->
 
       <div class="form-group">
-        <label>Select the bank account for you children</label>
-        <select class="form-control">
-          <option>Cheking/Saving</option>
-          <option>Credit Card</option>
-          <option>Time Deposit</option>
-        </select>
+        <label>Email:</label>
+        <input type="email" class="form-control" placeholder="Email">
       </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="form-group">
+        <label>Family</label>
+        <input class="form-control" placeholder="Family">
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
       <button type="reset" class="btn btn-success">Reset</button>
 
     </form>
   </div>
 
-  <div class=" info col-md-4">
-    <br>
-    <div class=" panel panel-primary text-center no-boder">
-      <div class="m4 panel-body">
-        <img src="assets/image/info.png" alt="">
-        <p>A Parent rol?</p>
-        <p>Create a family and join your members <i class="fa fa-users "></i> 
-        </p>
-        <p>Open the first account for them <i class="fa fa-credit-card "></i>
-        </p>
-        <p></p>
-      </div>
 
-    </div>
-  </div>
 
-  
 </div>

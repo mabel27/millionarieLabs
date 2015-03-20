@@ -42,19 +42,40 @@
 
   <div class="register-container ">
     <div class="row">
+      <div class="col-md-1">
+        
+      </div>
 <div class="wow pulse">
       <div class="lock col-xs-2 col-md-4">
         
       </div>
       </div>
-      <div class="register_signin col-xs-8 col-md-4">
+      <div class="register_signin col-xs-8 col-md-7">
 
         <form class="login" {{ action "authenticate" on="submit" }} role="form">
           <h2><span class="kf">Login </span></h2>
           {{!-- {{input type= "text" class="form-control" placeholder="User Name" value=userName}} 
           
+          {{#each error in user.errors.userName}}
+
+            <div class="alert alert-danger">
+              {{error.message}}.
+            </div>
+
+            {{/each}}
+
+          
                   
           {{input type="password" class="form-control" placeholder="Password" value=password}} --}}
+          
+          {{#each error in user.errors.password}}
+
+            <div class="alert alert-danger">
+              {{error.message}}.
+            </div>
+
+            {{/each}}
+
 
           <div class="form-group">
             {{input value=identification placeholder='User Name' class='form-control'}}

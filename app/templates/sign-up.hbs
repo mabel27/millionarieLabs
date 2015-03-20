@@ -50,7 +50,8 @@
         <div class="wow fadeInDown" data-wow-delay="0.3s">
           <form {{ action "createUser" on="submit" }} role="form">
             <h2  class="kf">Create a new User! </h2> 
-            {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}} {{#each error in user.errors.userName}}
+            {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}} 
+            {{#each error in user.errors.userName}}
 
             <div class="alert alert-danger">
               {{error.message}}.
@@ -62,19 +63,34 @@
               {{view "Ember.Select" content=role class="form-control" prompt="Role" value=selectedRole}}
             </div>
 
-            {{input type= "email" id="email" class="form-control" placeholder="Email" value=email}} {{#each error in user.errors.email}}
+            {{input type= "email" id="email" class="form-control" placeholder="Email" value=email}} 
+            {{#each error in user.errors.email}}
 
             <div class="alert alert-danger">
               {{error.message}}.
             </div>
 
-            {{/each}} {{input type="password" class="form-control" placeholder="Password" value=password}} {{#each error in user.errors.password}}
+            {{/each}} {{input type="password" class="form-control" placeholder="Password" value=password}} 
+            {{#each error in user.errors.password}}
+            
 
             <div class="alert alert-danger" role="alert">
               {{error.message}}.
             </div>
 
-            {{/each}} {{input type="password" class="form-control" placeholder=" Confirm Password" value=passwordConfirmation}}
+            {{/each}} 
+            
+            
+            {{input type="password" class="form-control" placeholder=" Confirm Password" value=passwordConfirmation}}
+            
+             {{#each error in user.errors.passwordConfirmation}}
+            
+
+            <div class="alert alert-danger" role="alert">
+              {{error.message}}.
+            </div>
+
+            {{/each}} 
             <div id="SecuritySection">
               <p class="kf">Security Questions</p>
               <hr class="star-primary">
