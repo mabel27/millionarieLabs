@@ -51,18 +51,22 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth'] = {
-    authorizer: 'simple-auth-authorizer:devise',
+    
+    
     authenticationRoute: 'signIn',
     routeAfterAuthentication: 'users.home',
     routeIfAlreadyAuthenticated: 'users.home',
-    crossOriginWhitelist: ['http://localhost:3000', 'https://millionaire-labs.heroku.com', 'https://millionaire-labs.com']
+    crossOriginWhitelist: ['http://localhost:3000', 'https://millionaire-labs.heroku.com', 'https://millionaire-labs.com'],
+    
   };
 
   ENV['simple-auth-devise'] = {
+    authorizer: 'authorizer:devise',
     resourceName: 'user',
     serverTokenEndpoint: 'http://localhost:3000/v1/sessions',
     tokenAttributeName: 'token',
-    identificationAttributeName: 'user_name'
+    identificationAttributeName: 'user_name',
+ 
   };
 
   return ENV;
