@@ -50,12 +50,17 @@ export default Ember.Controller.extend({
       route: 'signIn',
       pageLocation: '.sign-in-page-top',
       active: false
+    },
+    Users: {
+      text: 'Users',
+      route: 'users.index',
+      pageLocation: '.sign-in-page-top',
+      active: false
     }
 
   },
   actions: {
     scrollTo: function(pageLocation) {
-      console.log('XXXX: SCROLLTO ' + Ember.$(pageLocation).offset().top);
       window.scrollTo(0, Ember.$(pageLocation).offset().top);
     }
   }

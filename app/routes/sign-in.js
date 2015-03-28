@@ -6,12 +6,10 @@ import UnauthenticatedRouteMixin from 'simple-auth/mixins/unauthenticated-route-
 export default Ember.Route.extend(UnauthenticatedRouteMixin, {
   model: function () {
     //return this.store.find('user');
-    console.log(this.get('session.isAuthenticated'));
   },
- setupController: function(controller, model) {
+  setupController: function(controller, model) {
     this._super(controller, model);
     controller.set('user', this.store.createRecord('user', {}));
-   
   }
   
 });
