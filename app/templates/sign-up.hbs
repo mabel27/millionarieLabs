@@ -95,13 +95,13 @@
               <p class="kf">Security Questions</p>
               <hr class="star-primary">
               <div class="form-group">
-                {{view "Ember.Select" content=questionSelection prompt="Please select a question" class="form-control" optionLabelPath="content.description" optionValuePath="content.id" value=selectedQuestion1}}
+                {{view "Ember.Select" content=questionSelection prompt="Please select a question" class="form-control" optionLabelPath="content.security_question.description" optionValuePath="content.security_question.id" value=selectedQuestion1}}
               </div>
 
               {{input type= "text" class="form-control" placeholder="Answer question 1" value=answerQuestion1}}
 
               <div class="form-group">
-                {{view "Ember.Select" content=questionSelection prompt="Please select a question" class="form-control" optionLabelPath="content.description" optionValuePath="content.id" value=selectedQuestion2}}
+                {{view "Ember.Select" content=questionSelection prompt="Please select a question" class="form-control" optionLabelPath="content.security_question.description" optionValuePath="content.security_question.id" value=selectedQuestion2}}
               </div>
               {{input type= "text" class="form-control" placeholder="Answer question 2" value=answerQuestion2}}
             </div>
