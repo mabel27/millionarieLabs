@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <button type="button" class="btn btn-primary navbar-btn">Sign up</button>
+            <button  type="button" class="btn btn-primary navbar-btn">{{#link-to 'signUp'}}Sign up{{/link-to}}</button>
           </li>
         </ul>
       </div>
@@ -46,11 +46,11 @@
         
       </div>
 <div class="wow pulse">
-      <div class="lock col-xs-2 col-md-4">
+      <div class="lock col-xs-2 col-md-5">
         
       </div>
       </div>
-      <div class="register_signin col-xs-8 col-md-7">
+      <div class="register_signin col-xs-8 col-md-5">
 
         <form class="login" {{ action "authenticate" on="submit" }} role="form">
           <h2><span class="kf">Login </span></h2>
@@ -87,15 +87,21 @@
                   
             
           </div>
-          <button id="login_btn" class="btn btn-primary btn-md" type="submit"><span class="kf">Sign In</span> 
-          </button>
+           
+           <button class="btn btn-primary btn-md" type="submit"><span class="kf">Sign In</span> </button>
+      
+     
           <br>
-         <p> <i class=" fa fa-lock ">{{#link-to 'signUp'}} Lost Password? {{/link-to}}</i></p>
+         <p> <i class=" fa fa-lock ">{{#link-to 'signUp'}} Forgot Password? {{/link-to}}</i></p>
           <p>{{#link-to 'signUp'}}Not in the lab? Register now{{/link-to}}</p>
           <br>
           <br>
 
         </form>
+      </div>
+      
+      <div class="col-md-1">
+        
       </div>
     </div>
   </div>

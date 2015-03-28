@@ -28,7 +28,7 @@ export default Ember.Controller.extend({
       this.set('user.answerOne', this.get('answerQuestion1') || '');
       this.set('user.questionTwo', this.get('selectedQuestion2'));
       this.set('user.answerTwo', this.get('answerQuestion2') || '');
-      this.get('user').save().then(function(){alert("Sucessful ");},function(response){console.log(response);});
+      this.get('user').save().then(function(){alert("Sucessful Sign Up ");},function(response){console.log(response);});
     }
   },
   typeSelected: function()
