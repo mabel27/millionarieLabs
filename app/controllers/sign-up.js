@@ -17,8 +17,17 @@ export default Ember.Controller.extend({
 //  user: this.store.createRecord('user',{}),
   actions: {
     createUser: function () {
+      var self = this;
+      var onSuccess = function() {
+        alert('User has been created, please sign in!')
+        self.transitionToRoute('signIn');
+      };
+
+      var onFail = function(response) {
+        // deal with the failure here
+      };
       var role = this.get('selectedRole'),
-      email = 'parent' === role ? this.get('email') : 'child@email.com';
+      email = 'parent' === role ? this.get('email') : null;
       this.set('user.userName',this.get('userName'));
       this.set('user.email',email);
       this.set('user.password',this.get('password'));
@@ -28,7 +37,7 @@ export default Ember.Controller.extend({
       this.set('user.answerOne', this.get('answerQuestion1') || '');
       this.set('user.questionTwo', this.get('selectedQuestion2'));
       this.set('user.answerTwo', this.get('answerQuestion2') || '');
-      this.get('user').save().then(function(){alert("Sucessful Sign Up ");},function(response){console.log(response);});
+      this.get('user').save().then(onSuccess,onFail);
     }
   },
   typeSelected: function()
