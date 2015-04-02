@@ -14,7 +14,9 @@ export default Ember.Controller.extend(LoginControllerMixin, {
      }, function(message){
       self.set('errorMessage', message);
      });
-    }
+    },
+    
+    
   }
 
 });

@@ -16,7 +16,7 @@
         </button>
 
         <a class="navbar-brand kf" style="cursor:pointer"> <i class="ki k-tree"></i>Millionaire Labs</a>
-        <p class="navbar-text">Signed in as {{User.userName}}</p>
+        <p class="navbar-text">Welcome! {{session.user_name}}</p>
 
       </div>
 
@@ -24,7 +24,13 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <button type="button" class="btn btn-primary navbar-btn">Sign out</button>
+            {{#if session.isAuthenticated}}
+            
+         <button type="button" class="btn btn-primary navbar-btn"{{ action 'invalidateSession' }} >Sign out</button>
+          
+          {{else}}
+          {{#link-to 'sign-in'}}Login{{/link-to}}
+          {{/if}}
           </li>
         </ul>
       </div>

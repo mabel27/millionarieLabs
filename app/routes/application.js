@@ -3,10 +3,32 @@
 import Ember from 'ember';
 import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 
-export default Ember.Route.extend(ApplicationRouteMixin, {
+export
+default Ember.Route.extend(ApplicationRouteMixin, {
   actions: {
-    sessionAuthenticationFailed: function(error) {
+    sessionAuthenticationFailed: function (error) {
       this.controllerFor('signIn').set('signInErrorMessage', error.message);
+    },
+
+    invalidateSession: function () {
+      this.get('session').invalidate();
+    },
+    
+    sessionAuthenticationSucceeded: function() {
+      var role  = this.get('session').get('user_role');
+  
+      if(role === 'parent'){
+    
+        this.transitionTo('users.home');
+      
+      }
+    
+      else
+      {
+       this.transitionTo('child.home');
+      }
     }
+
+
   }
 });
