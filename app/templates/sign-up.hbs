@@ -5,8 +5,6 @@
 
     <div class="container-fluid">
 
-
-
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#side_bar">
@@ -42,14 +40,14 @@
     <div class="row ">
       <div class="wow pulse">
         <div class="wallet col-xs-2 col-md-4">
-
         </div>
 
       </div>
       <div class="register col-xs-8 col-md-7">
         <div class="wow fadeInDown" data-wow-delay="0.3s">
           <form {{ action "createUser" on="submit" }} role="form">
-            <h2 class="kf">Create a new User! </h2> {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}} {{#each error in user.errors.userName}}
+            <h2 class="kf">Create a new User! </h2>
+            {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}} {{#each error in user.errors.userName}}
 
             <div class="alert alert-danger">
               {{error.message}}.
@@ -101,9 +99,6 @@
             </button>
             <button class="btn btn-primary btn-md" type="reset"> <span class="kf">CANCEL </span>
             </button>
-            <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
-              Launch demo modal
-            </button>
             <br>
             <p>{{#link-to 'signIn'}}Already In? Login{{/link-to}}</p>
 
@@ -112,38 +107,6 @@
         </div>
       </div>
 
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title kf" id="myModalLabel"> <i class="fa fa-users fa-2x"></i>Create your family</h4>
-            </div>
-            <div class="modal-body">
-              <div class="form-group">
-                <label>Create a Family Username</label>
-                <input class="form-control" placeholder="Family UserName">
-                <button type="button" class="btn btn-primary">Save Family</button>
-              </div>
-              <!-- search section-->
-              <label>Add your family members</label>
-              <div class="input-group custom-search-form">
-
-                <input type="text" class="form-control" placeholder="Search family members">
-                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-check-square"></i>
-                                </button>
-                            </span>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class=" col-md-1">
       </div>
 

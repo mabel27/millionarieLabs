@@ -23,6 +23,8 @@ Router.map(function() {
 
   this.route('signUp');
   this.route('signIn');
+  this.route('question');
+
 
 
   this.resource('users', function() {
