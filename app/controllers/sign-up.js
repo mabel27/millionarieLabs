@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
     createUser: function () {
       var self = this;
       var onSuccess = function() {
-        alert('User has been created, please sign in!')
+        alert('User has been created, please sign in!');
         self.transitionToRoute('signIn');
       };
 
