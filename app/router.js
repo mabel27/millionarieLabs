@@ -23,7 +23,7 @@ Router.map(function() {
 
   this.route('signUp');
   this.route('signIn');
-  this.route('question');
+ 
 
 
 
@@ -34,6 +34,8 @@ Router.map(function() {
     this.route('profile');
     
     this.route('account');
+
+    this.route('family');
     
   });
   
