@@ -7,6 +7,7 @@ import DS from 'ember-data';
 //   namespace: 'v1'
 // });
 
+
 export default DS.ActiveModelAdapter.extend({
   host: 'http://localhost:3000',
   namespace: 'v1'

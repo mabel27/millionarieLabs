@@ -41,6 +41,7 @@ Router.map(function() {
   this.resource('child', function() {
     
     this.route('home');
+    this.route('chore');
     
     
   });

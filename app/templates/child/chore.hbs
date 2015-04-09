@@ -1,0 +1,64 @@
+{{!-- /app/templates/child/chore.hbs --}} {{outlet}}
+<br>
+
+<div class=" col-md-1">
+</div>
+
+<div class="chore_p col-md-5">
+  
+  
+</div>
+<div class="chores  col-xs-4 col-md-6">
+
+<div id="todoapp">
+      <div id="header">
+        
+        {{ input type="text" id="new-todo" placeholder="What needs to be done?" value = newTitle
+     action= "createChore" }}
+
+      <div id="main">
+        <ul id="todo-list">
+          {{#each chore in model}}
+          <li {{bind-attr class="chore.isComplete:completed"}}>
+            
+            <input type="checkbox" class="toggle">
+            <label> {{chore.title}}</label> <button class="destroy"></button>
+          
+          
+      
+          </li>
+          
+          {{/each}}
+        </ul>
+
+        <input type="checkbox" id="toggle-all">
+
+        
+      </div>
+
+      <footer id="footer">
+        <span id="todo-count">
+          <strong>2</strong> todos left
+        </span>
+        <ul id="filters">
+          <li>
+            <a href="all" class="selected">All</a>
+          </li>
+          <li>
+            <a href="active">Active</a>
+          </li>
+          <li>
+            <a href="completed">Completed</a>
+          </li>
+        </ul>
+
+        <button id="clear-completed">
+          Clear completed (1)
+        </button>
+      </footer>
+    </div>
+
+    <footer id="info">
+      <p>Double-click to edit a todo</p>
+    </footer>
+</div>
