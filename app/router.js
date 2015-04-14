@@ -36,6 +36,8 @@ Router.map(function() {
     this.route('account');
 
     this.route('family');
+
+    this.route('activity');
     
   });
   
