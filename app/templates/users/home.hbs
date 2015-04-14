@@ -84,7 +84,35 @@
     
    
   </div>
+  <div class="circle col-md-4">
+      
+      <br>
+          <h3><span class="kf">Add Child</span></h3>
+          <h4>Search your child by username</h4>
+          {{input type= "text" class="form-control" placeholder="UserName" value=userName}}
+           <button type="submit" class="btn btn-primary" {{action 'searchUser'}}>Search User</button>
+           <button type="submit" class="btn btn-primary" {{action 'clearUserField'}}>Clear</button>
+          <br/>
+          {{#each selectedUserName in selectedUsers}}
 
+
+            <div class="alert alert-danger" role="alert">
+              {{selectedUserName}}
+            </div>
+
+            {{/each}}
+
+          <h4>Select family</h4>
+            <div class="form-group">
+                {{view "Ember.Select" content=familiesSelection prompt="Please select a family" class="form-control" optionLabelPath="content.family.family_name" optionValuePath="content.family.id" value=selectedQuestion1}}
+              </div>
+
+      
+      <br>
+          <p><a id="c_btn" class=" btn btn-default btn-lg" href="#" role="button" {{action 'addChildToFamily'}}><span class="glyphicon glyphicon-star" aria-hidden="true" ></span>Add to Family</a></p>
+    
+   
+  </div>
   </div>
 </div>
 

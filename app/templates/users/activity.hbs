@@ -1,0 +1,38 @@
+<br>
+<br>
+<br>
+
+<div class="activity col-xs-2 col-md-5">
+  
+</div>
+
+<div class="col-xs-2 col-md-5">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+            
+              <h4 class="modal-title kf" id="myModalLabel"> <i class="fa fa-users fa-2x"></i>Create activity</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label>Create activity</label>
+                {{input type= "text" class="form-control" placeholder="Description" value=description}} 
+              </div>
+               <div class="form-group">
+                <label>Reward</label>
+                {{input type= "text" class="form-control" placeholder="Reward" value=reward}} 
+              </div>
+                
+            <div class="form-group">
+               <label>Select Family</label>
+                {{view "Ember.Select" content=familiesSelection prompt="Please select a family" class="form-control" optionLabelPath="content.family.family_name" optionValuePath="content.family.id" value=selectedFamilyId}}
+              </div>
+               </div>
+            <br>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button class="btn btn-primary" {{action 'createActivity'}}>Create Activity</button>
+            </div>
+          </div>
+        </div>
+      </div>

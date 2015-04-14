@@ -8,7 +8,6 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     //return this.store.find('user');
   },
   setupController: function(controller, model) {
-  	alert("dwqdwqdq");
     this._super(controller, model);
     controller.set('family', this.store.createRecord('family', {}));
   }

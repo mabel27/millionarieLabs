@@ -8,7 +8,6 @@ export default Ember.Controller.extend({
 
 		createFamily: function ()
 		{
-			alert("dwqdwqdwqdqw");
 			var onSuccess = function() {
 	        alert('User has been created, please sign in!');
 	        //self.transitionToRoute('signIn');
