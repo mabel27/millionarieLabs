@@ -44,6 +44,7 @@ Router.map(function() {
     
     this.route('home');
     this.route('chore');
+    this.route('list');
     
     
   });
