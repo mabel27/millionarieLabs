@@ -3,6 +3,35 @@
   <div class="row">
     <br>
     <div class="circle col-md-3">
+      
+      <img id="d" class="img-circle " src="assets/image/businessmen33.png" alt="Generic placeholder image">
+      <h3><span class="kf">Add a Child</span></h3>
+      <div id="back">
+      <p>Search your child by username</p>
+      {{input type= "text" class="form-control" placeholder="UserName" value=userName}}
+      <button type="submit" class="btn btn-primary" {{action 'searchUser'}}>Search User</button>
+      <button type="submit" class="btn btn-primary" {{action 'clearUserField'}}>Clear</button>
+      <br/>{{#each selectedUserName in selectedUsers}}
+
+      <div class="alert alert-danger" role="alert">
+        {{selectedUserName}}
+      </div>
+
+      {{/each}}
+
+      <p>Select family</p>
+      <div class="form-group">
+        {{view "Ember.Select" content=familiesSelection prompt="Please select a family" class="form-control" optionLabelPath="content.family.family_name" optionValuePath="content.family.id" value=selectedQuestion1}}
+      </div>
+      <br>
+      <p><a id="c_btn" class=" btn btn-default btn-md" href="#" role="button" {{action 'addChildToFamily'}}><span class="glyphicon glyphicon-star" aria-hidden="true" ></span>Add to Family</a>
+      </p>
+
+</div>
+    </div>
+
+
+    <div class="circle col-md-3">
       {{#link-to 'users.home'}}
       <img id="c" class="img-circle " src="assets/image/diamond38.png" alt="Generic placeholder image">
       <br>
@@ -19,11 +48,11 @@
       <button type="submit" class="btn btn-danger">Withdraw</button>
       <br>
       <br>
-      <p><a id="c_btn" class=" btn btn-default btn-lg" href="#" role="button"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>View details &raquo;</a>
+      <p><a id="c_btn" class=" btn btn-default btn-md" href="#" role="button"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>View details &raquo;</a>
       </p>
 
     </div>
-    
+
     <div class="circle col-md-3">
       {{#link-to 'users.home'}}
       <img id="c" class="img-circle " src="assets/image/royalties.png" alt="Generic placeholder image">
@@ -41,11 +70,11 @@
       <button type="submit" class="btn btn-danger">Withdraw</button>
       <br>
       <br>
-      <p><a id="c_btn" class=" btn btn-default btn-lg" href="#" role="button"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>View details &raquo;</a>
+      <p><a id="c_btn" class=" btn btn-default btn-md" href="#" role="button"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>View details &raquo;</a>
       </p>
 
     </div>
-    
+
     <div class="circle col-md-3">
       {{#link-to 'users.home'}}
       <img id="c" class="img-circle " src="assets/image/star173.png" alt="Generic placeholder image">
@@ -63,56 +92,11 @@
       <button type="submit" class="btn btn-danger">Withdraw</button>
       <br>
       <br>
-      <p><a id="c_btn" class=" btn btn-default btn-lg" href="#" role="button"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>View details &raquo;</a>
+      <p><a id="c_btn" class=" btn btn-default btn-md" href="#" role="button"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>View details &raquo;</a>
       </p>
 
     </div>
-    
-        <div class="circle col-md-3">
-       {{#link-to 'users.home'}} <img id="d" class="img-circle" src="assets/image/clipboard98.png" alt="Generic placeholder image">
-      <br>
-          <h3><span class="kf">Last News.</span></h3> {{/link-to}}   
-      
-      <img src="assets/image/info.png" ><p>Dapibus ac facilisis in</p>
-      <br>
-      <img src="assets/image/info.png" ><p>Dapibus ac facilisis in</p>
-      <br>
-      <img src="assets/image/info.png" ><p>Dapibus ac facilisis in</p>
-      
-      <br>
-          <p><a id="c_btn" class=" btn btn-default btn-lg" href="#" role="button" ><span class="glyphicon glyphicon-star" aria-hidden="true"></span>View details &raquo;</a></p>
-    
-   
-  </div>
-  <div class="circle col-md-4">
-      
-      <br>
-          <h3><span class="kf">Add Child</span></h3>
-          <h4>Search your child by username</h4>
-          {{input type= "text" class="form-control" placeholder="UserName" value=userName}}
-           <button type="submit" class="btn btn-primary" {{action 'searchUser'}}>Search User</button>
-           <button type="submit" class="btn btn-primary" {{action 'clearUserField'}}>Clear</button>
-          <br/>
-          {{#each selectedUserName in selectedUsers}}
 
-
-            <div class="alert alert-danger" role="alert">
-              {{selectedUserName}}
-            </div>
-
-            {{/each}}
-
-          <h4>Select family</h4>
-            <div class="form-group">
-                {{view "Ember.Select" content=familiesSelection prompt="Please select a family" class="form-control" optionLabelPath="content.family.family_name" optionValuePath="content.family.id" value=selectedQuestion1}}
-              </div>
-
-      
-      <br>
-          <p><a id="c_btn" class=" btn btn-default btn-lg" href="#" role="button" {{action 'addChildToFamily'}}><span class="glyphicon glyphicon-star" aria-hidden="true" ></span>Add to Family</a></p>
-    
-   
-  </div>
   </div>
 </div>
 
