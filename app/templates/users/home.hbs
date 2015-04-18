@@ -7,7 +7,7 @@
       <img id="d" class="img-circle " src="assets/image/businessmen33.png" alt="Generic placeholder image">
       <h3><span class="kf">Add a Child</span></h3>
       <div id="back">
-      <p>Search your child by username</p>
+      <p id="p">Child Username:</p>
       {{input type= "text" class="form-control" placeholder="UserName" value=userName}}
       <button type="submit" class="btn btn-primary" {{action 'searchUser'}}>Search User</button>
       <button type="submit" class="btn btn-primary" {{action 'clearUserField'}}>Clear</button>
@@ -19,11 +19,10 @@
 
       {{/each}}
 
-      <p>Select family</p>
+      <p id="p">Select family:</p>
       <div class="form-group">
         {{view "Ember.Select" content=familiesSelection prompt="Please select a family" class="form-control" optionLabelPath="content.family.family_name" optionValuePath="content.family.id" value=selectedQuestion1}}
       </div>
-      <br>
       <p><a id="c_btn" class=" btn btn-default btn-md" href="#" role="button" {{action 'addChildToFamily'}}><span class="glyphicon glyphicon-star" aria-hidden="true" ></span>Add to Family</a>
       </p>
 
