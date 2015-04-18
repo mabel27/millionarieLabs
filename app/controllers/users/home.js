@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
 
 	userName: '',
 	selectedUsers: [],
+	selectedFamily: '',
 	actions: {
 
 		searchUser: function ()
@@ -60,9 +61,10 @@ export default Ember.Controller.extend({
 		},
 		addChildToFamily: function ()
 		{
+			 var self = this;
 			var onSuccess = function() {
-	        alert('User has been created, please sign in!');
-	        //self.transitionToRoute('signIn');
+	        alert('Family has been created!');
+	        self.transitionToRoute('users.home');
 	      };
 
 	      var onFail = function(response) {

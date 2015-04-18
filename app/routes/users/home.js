@@ -6,6 +6,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     //return this.store.find('user');
   },
   setupController: function(controller, model) {
+    this._super(controller, model);
   	Ember.$.getJSON('http://localhost:3000/v1/families', function( data ) {
     	var familiesSelection = [];
 		data = data['families'];
@@ -15,6 +16,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 		    familiesSelection.push(item);
 		});
     	controller.set('familiesSelection', familiesSelection);
+      controller.set('userFamily', {});
+      controller.set('family', {});
     });
   }
 });
