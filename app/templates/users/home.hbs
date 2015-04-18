@@ -13,11 +13,13 @@
       {{input type= "text" class="form-control" placeholder="UserName" value=userName}}
       <button type="submit" class="btn btn-primary" {{action 'searchUser'}}>Search User</button>
       <button type="submit" class="btn btn-primary" {{action 'clearUserField'}}>Clear</button>
-      <br/>{{#each selectedUserName in selectedUsers}}
 
-      <div class="alert alert-danger" role="alert">
+      <p>Selected users</p>
+    {{#each selectedUserName in selectedUsers}}
+
+
         {{selectedUserName}}
-      </div>
+  <br/>
 
       {{/each}}
 
