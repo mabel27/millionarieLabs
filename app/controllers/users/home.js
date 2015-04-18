@@ -6,13 +6,9 @@ export default Ember.Controller.extend({
 
 	userName: '',
 	selectedUsers: [],
-<<<<<<< HEAD
     balance: '',
     credit: '',
-    
-=======
 	selectedFamily: '',
->>>>>>> 6052fbf25dfa14b40b4ef6407d74f2d18c6e9227
 	actions: {
 
 		searchUser: function ()
