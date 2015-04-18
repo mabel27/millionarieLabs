@@ -25,7 +25,7 @@
 
       <p id="p">Select family:</p>
       <div class="form-group">
-        {{view "Ember.Select" content=familiesSelection prompt="Please select a family" class="form-control" optionLabelPath="content.family.family_name" optionValuePath="content.family.id" value=selectedQuestion1}}
+        {{view "Ember.Select" content=familiesSelection prompt="Please select a family" class="form-control" optionLabelPath="content.family.family_name" optionValuePath="content.family.id" value=selectedFamily}}
       </div>
       <p><a id="c_btn" class=" btn btn-default btn-md" href="#" role="button" {{action 'addChildToFamily'}}><span class="glyphicon glyphicon-star" aria-hidden="true" ></span>Add to Family</a>
       </p>
