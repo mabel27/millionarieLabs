@@ -2,12 +2,14 @@
 <div class="register-container container ">
   <div class="row">
     <br>
-    <div class="circle col-md-3">
-      
-      <img id="d" class="img-circle " src="assets/image/businessmen33.png" alt="Generic placeholder image">
-      <h3><span class="kf">Add a Child</span></h3>
+    <div class="col-md-3">
+          <div  id="h1">
+        <h3><span class="kf">Add Child</span><span><img  src="assets/image/businessmen33.png" width="50" height="50" ></span></h3>
+
+      </div>
+
       <div id="back">
-      <p>Search your child by username</p>
+      <p id="p">Child Username:</p>
       {{input type= "text" class="form-control" placeholder="UserName" value=userName}}
       <button type="submit" class="btn btn-primary" {{action 'searchUser'}}>Search User</button>
       <button type="submit" class="btn btn-primary" {{action 'clearUserField'}}>Clear</button>
@@ -21,11 +23,10 @@
 
       {{/each}}
 
-      <p>Select family</p>
+      <p id="p">Select family:</p>
       <div class="form-group">
         {{view "Ember.Select" content=familiesSelection prompt="Please select a family" class="form-control" optionLabelPath="content.family.family_name" optionValuePath="content.family.id" value=selectedFamily}}
       </div>
-      <br>
       <p><a id="c_btn" class=" btn btn-default btn-md" href="#" role="button" {{action 'addChildToFamily'}}><span class="glyphicon glyphicon-star" aria-hidden="true" ></span>Add to Family</a>
       </p>
 
@@ -37,13 +38,15 @@
       {{#link-to 'users.home'}}
       <img id="c" class="img-circle " src="assets/image/diamond38.png" alt="Generic placeholder image">
       <br>
-      <h3><span class="kf">Amy Activity.</span></h3> {{/link-to}}
+      {{#each account in model}}
+      <h3><span class="kf">{{account.userName}}</span></h3> {{/link-to}}
       <br>
       <p class="small">
-        <img src="assets/image/dollar_coin.png" alt="">Present Balance: 200$</p>
+        <img src="assets/image/dollar_coin.png" alt="">Balance:{{account.checkBalance}}</p>
       <p class="small">
-        <img src="assets/image/not_available.png" alt="">Pending Withdrawals: -30$</p>
+        <img src="assets/image/not_available.png" alt="">Credit:{{account.creditBalance}}</p>
       <br>
+      {{/each}}
       <input type="number" class="form-control" placeholder="Amount to Deposit">
       <br>
       <button type="submit" class="btn btn-primary">Deposit</button>

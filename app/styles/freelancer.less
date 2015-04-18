@@ -126,24 +126,6 @@ header {
   }
 }
   
-
-
-    
-  
-    .video {
-        
-        position: relative;
-        padding-bottom: 56.25%;
-        overflow: hidden; 
-        
-        iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        }
-    }
     
 	.intro-text {
 		.name {
@@ -251,6 +233,87 @@ header {
 
 }
 
+#h1{
+   
+   background: @brand-secondary;
+    
+     h3 {
+       
+       text-align: center;
+       font-weight: bold;
+        border-style: inset;
+  border-width: 3px;
+     }
+
+
+}
+
+.act {
+  
+  #b1 {
+    
+  background: @brand-success;
+  border-style: inset;
+  border-width: 5px;
+    
+    #c_btn {
+      
+      padding-right: 1em;
+    
+    
+    }
+  
+  }
+
+#h1{
+   
+   background: @brand-secondary;
+    
+     h3 {
+       
+       text-align: center;
+       font-weight: bold;
+        border-style: inset;
+  border-width: 3px;
+     }
+
+
+}
+}
+ .account {
+   
+   th{
+   
+   background: @brand-success;
+     font-weight: bold;
+     text-align: center;
+     font-size: 18px;
+   }
+   
+   td {
+     text-align: center;
+     font-weight: bold;
+     font-size: 18px;
+   }
+ 
+ 
+   #h1{
+   
+   background: @brand-secondary;
+     
+     h3 {
+       
+       text-align: center;
+       font-weight: bold;
+       border-style: inset;
+  border-width: 3px;
+     }
+   
+   }
+ 
+ 
+ }
+
 
  .circle {
    
@@ -261,6 +324,8 @@ header {
    height: 140px;
    
    } 
+   
+   #p { color: @brand-title; font-weight: bold;}
    
    #d:hover {
    
@@ -511,6 +576,16 @@ background: #E9EB4C;
     background-size:contain;
   }
 
+.activity {
+    padding-top: 25em;
+    background: url(image/verified19.png) no-repeat;
+    background-size:contain;
+  }
+
+#mymodallabel {
+  
+  text-align: center;
+}
 
  #h_intro {
 
@@ -693,25 +768,10 @@ margin-top: 20px;
         height:60px;
         
     }
-.user-info {
-    display: block;
-  font-weight: bold;
-    color:white !important;
-display: inline-block;
-padding: 15px;
-margin-bottom: 0px
-}
-.user-text-online {
-    font-size:1em;
-    color:#fff
-}
-.user-circle-online {
-    width: 15px!important;
-    height: 15px!important;
-}
+
 
 section {
-    padding: 100px 0;
+    padding: 30px 0;
     h2 {
     	margin: 0;
     	font-size: 3em;
@@ -1306,7 +1366,76 @@ label[for='toggle-all'] {
 
 
 
-
+/*Pricing Plans
+---------------------------------------------------------*/
+.pricing-plan {
+	width: 100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.pricing-plan .header {
+	padding: 25px 20px 18px 20px;
+	text-align: center;
+	background-color: @brand-primary;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+.pricing-plan .header h3 {
+	font-size: 1.7em;
+	color: #ffffff;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin: 0 0 8px 0;
+	line-height: 1.2;
+}
+.pricing-plan .price {
+	font-size: 2.6em;
+	color: #ffffff;
+	font-weight: 700;
+}
+.pricing-plan .body {
+	padding: 40px 0 15px 0;
+	background-color: #e7e7ea;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+.pricing-plan.highlited .body {
+	background-color: @brand-new;
+}
+.pricing-plan .body ul {
+	text-align: center;
+	padding: 0px;
+	margin: 0 0 90px 0;
+	line-height: 1.3;
+	font-size: 1.3em;
+	font-weight: 300;
+}
+.pricing-plan.highlited .body ul {
+	color: #ffffff;
+}
+.pricing-plan .body ul li {
+	padding: 18px 20px;
+	border-bottom: 1px solid @brand-primary;
+}
+.pricing-plan.highlited .body ul li {
+	border-bottom: 1px solid #ffffff;
+}
+.pricing-plan .body ul li:before {
+	display: none;
+}
+.pricing-plan .body ul li:last-child {
+	border-bottom: none;
+}
+.pricing-plan .buy-btn {
+	width: 100%;
+	padding: 0 45px;
+}
+.pricing-plan .buy-btn .btn {
+	width: 100%;
+}
 
 
 /* ===========================

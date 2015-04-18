@@ -14,9 +14,13 @@ default Ember.Route.extend({
     createChore: function(){
       
       alert('hellooo');   
-    }
+    },
 
+  
+setupController: function(controller, model) {
+    this._super(controller, model);
+    controller.set('chores', this.store.createRecord('chore', {}));
   }
-
+                           }
 
 });

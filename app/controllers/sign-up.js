@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
       };
 
       var onFail = function(response) {
-        // deal with the failure here
+        alert('Try again');
       };
       var role = this.get('selectedRole'),
       email = 'parent' === role ? this.get('email') : null;
