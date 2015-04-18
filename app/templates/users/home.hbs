@@ -33,20 +33,20 @@
 </div>
     </div>
 
-
-    <div class="circle col-md-3">
+ {{#each selectedUserName in selectedUsers}}
+    <div class=" col-md-3">
       {{#link-to 'users.home'}}
-      <img id="c" class="img-circle " src="assets/image/diamond38.png" alt="Generic placeholder image">
-      <br>
-      {{#each account in model}}
-      <h3><span class="kf">{{account.userName}}</span></h3> {{/link-to}}
-      <br>
+      
+        <div  id="h1">
+        <h3><span class="kf">{{selectedUserName}}</span><span><img  src="assets/image/diamond38.png" width="50" height="50" ></span></h3>{{/link-to}}
+
+      </div>
       <p class="small">
-        <img src="assets/image/dollar_coin.png" alt="">Balance:{{account.checkBalance}}</p>
+        <img src="assets/image/dollar_coin.png" alt="">Balance:</p>
       <p class="small">
-        <img src="assets/image/not_available.png" alt="">Credit:{{account.creditBalance}}</p>
+        <img src="assets/image/not_available.png" alt="">Credit:</p>
       <br>
-      {{/each}}
+   
       <input type="number" class="form-control" placeholder="Amount to Deposit">
       <br>
       <button type="submit" class="btn btn-primary">Deposit</button>
@@ -57,51 +57,7 @@
       </p>
 
     </div>
-
-    <div class="circle col-md-3">
-      {{#link-to 'users.home'}}
-      <img id="c" class="img-circle " src="assets/image/royalties.png" alt="Generic placeholder image">
-      <br>
-      <h3><span class="kf">Likun Activity.</span></h3> {{/link-to}}
-      <br>
-      <p class="small">
-        <img src="assets/image/dollar_coin.png" alt="">Present Balance: 200$</p>
-      <p class="small">
-        <img src="assets/image/not_available.png" alt="">Pending Withdrawals: -30$</p>
-      <br>
-      <input type="number" class="form-control" placeholder="Amount to Deposit">
-      <br>
-      <button type="submit" class="btn btn-primary">Deposit</button>
-      <button type="submit" class="btn btn-danger">Withdraw</button>
-      <br>
-      <br>
-      <p><a id="c_btn" class=" btn btn-default btn-md" href="#" role="button"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>View details &raquo;</a>
-      </p>
-
-    </div>
-
-    <div class="circle col-md-3">
-      {{#link-to 'users.home'}}
-      <img id="c" class="img-circle " src="assets/image/star173.png" alt="Generic placeholder image">
-      <br>
-      <h3><span class="kf">Maddie Activity.</span></h3> {{/link-to}}
-      <br>
-      <p class="small">
-        <img src="assets/image/dollar_coin.png" alt="">Present Balance: 200$</p>
-      <p class="small">
-        <img src="assets/image/not_available.png" alt="">Pending Withdrawals: -30$</p>
-      <br>
-      <input type="number" class="form-control" placeholder="Amount to Deposit">
-      <br>
-      <button type="submit" class="btn btn-primary">Deposit</button>
-      <button type="submit" class="btn btn-danger">Withdraw</button>
-      <br>
-      <br>
-      <p><a id="c_btn" class=" btn btn-default btn-md" href="#" role="button"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>View details &raquo;</a>
-      </p>
-
-    </div>
-
+     {{/each}}
   </div>
 </div>
 

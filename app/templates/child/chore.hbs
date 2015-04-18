@@ -5,60 +5,45 @@
 </div>
 
 <div class="chore_p col-md-5">
-  
-  
+
+
 </div>
-<div class="chores  col-xs-4 col-md-6">
 
-<div id="todoapp">
-      <div id="header">
-        
-        {{ input type="text" id="new-todo" placeholder="What needs to be done?" value = newTitle
-     action= "createChore" }}
-
-      <div id="main">
-        <ul id="todo-list">
-          {{#each chore in model}}
-          <li {{bind-attr class="chore.isComplete:completed"}}>
-            
-            <input type="checkbox" class="toggle">
-            <label> {{chore.title}}</label> <button class="destroy"></button>
-          
-          
-      
-          </li>
-          
-          {{/each}}
-        </ul>
-
-        <input type="checkbox" id="toggle-all">
-
-        
+<div class="act col-xs-6 col-md-6">
+  <div class="wow bounceIn data-wow-delay='0.5s' " id="h1">
+    <h3><span class="kf">Activity</span><span><img  src="assets/image/verified19.png" width="50" height="50" ></span></h3>
+  </div>
+  <br>
+  <div id="b1" class="col-md-12">
+    <div class="col-md-12">
+      <br>
+      <div class="col-md-4">
+        <p>Do the Dishes:2$</p>
       </div>
-
-      <footer id="footer">
-        <span id="todo-count">
-          <strong>2</strong> todos left
+      <div class="col-md-4">
+        <a id="c_btn" class=" btn btn-default btn-sm" href="#" role="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Accept</a>
+        <span> <a id="c_btn" class=" btn btn-default btn-sm" href="#" role="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Decline</a>
         </span>
-        <ul id="filters">
-          <li>
-            <a href="all" class="selected">All</a>
-          </li>
-          <li>
-            <a href="active">Active</a>
-          </li>
-          <li>
-            <a href="completed">Completed</a>
-          </li>
-        </ul>
-
-        <button id="clear-completed">
-          Clear completed (1)
-        </button>
-      </footer>
+      </div>
+      <div class="col-md-4">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">Complete
+          </label>
+        </div>
+      </div>
+      <p>Walk the dog: 2$ <span> <a id="c_btn" class=" btn btn-default btn-sm" href="#" role="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>done</a>
+        </span>
+      </p>
+      <br>
+      <p>Wash the car: 2$ <span> <a id="c_btn" class=" btn btn-default btn-sm" href="#" role="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>done</a>
+        </span>
+      </p>
     </div>
 
-    <footer id="info">
-      <p>Double-click to edit a todo</p>
-    </footer>
+  </div>
 </div>
+
+
+<span> <a id="c_btn" class=" btn btn-default btn-sm" href="#" role="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>done</a>
+</span>
