@@ -79,6 +79,7 @@ export default Ember.Controller.extend({
 			this.get('selectedUsers').clear();
 			this.set('userName', '');
 			this.set('selectedFamily', '');
+            alert('The Child has been added to the family');
 			this.transitionToRoute('users.home');
       		
 		}

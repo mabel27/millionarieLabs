@@ -1,4 +1,8 @@
-{{!-- /app/templates/child/home.hbs --}} {{outlet}}
+{{!-- /app/templates/child/home.hbs --}} 
+
+{{outlet}}
+
+
 <br>
 <div class="user col-md-12">
 
@@ -78,8 +82,10 @@
       <div id="b1" class="col-md-12">
       <div class="col-md-12">
         <br>
-       <p>Do the Dishes: 2$ <span> <a id="c_btn" class=" btn btn-default btn-sm" href="#" role="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>done</a></span></p>
-        <br>
+        {{#each activity in model }}
+       <p>activity.description, activity.reward<span> <a id="c_btn" class=" btn btn-default btn-sm" href="#" role="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>done</a></span></p>
+         {{/each}}
+        <br> 
          <p>Walk the dog: 2$ <span> <a id="c_btn" class=" btn btn-default btn-sm" href="#" role="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>done</a></span></p>
         <br>
         <p>Wash the car: 2$ <span> <a id="c_btn" class=" btn btn-default btn-sm" href="#" role="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>done</a></span></p>
