@@ -75,7 +75,10 @@ export default Ember.Controller.extend({
 				self.set('userFamily.userName', item);
 				self.get('userFamily').save();
 			});
-			this.set('selectedFamily', []);
+			this.set('userFamily', this.store.createRecord('user-family', {}));
+			this.get('selectedUsers').clear();
+			this.set('userName', '');
+			this.set('selectedFamily', '');
 			this.transitionToRoute('users.home');
       		
 		}
