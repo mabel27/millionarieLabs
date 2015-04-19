@@ -72,7 +72,7 @@ export default Ember.Controller.extend({
 	      var onFail = function(response) {
 	        // deal with the failure here
 	      };
-      		this.set('family.familyName', this.get('familyName'));
+      		this.set('family.familyName', this.get('selectedFamily'));
       		this.get('family').save().then(onSuccess,onFail);
 		}
 

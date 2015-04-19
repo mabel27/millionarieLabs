@@ -19,7 +19,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 			
 		    accountSelection.push(item);
 		});
-    	controller.set('accountSelection', accoutnsSelection);
+    	controller.set('accountSelection', accountSelection);
     });
     
   }
