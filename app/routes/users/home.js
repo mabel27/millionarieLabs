@@ -16,8 +16,9 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 		    familiesSelection.push(item);
 		});
     	controller.set('familiesSelection', familiesSelection);
-      controller.set('userFamily', {});
-      controller.set('family', {});
+   
     });
+       controller.set('userFamily', this.store.createRecord('user-family', {}));
+      controller.set('family', this.store.createRecord('family', {}));
   }
 });

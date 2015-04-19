@@ -6,8 +6,6 @@ export default Ember.Controller.extend({
 
 	userName: '',
 	selectedUsers: [],
-    balance: '',
-    credit: '',
 	selectedFamily: '',
 	actions: {
 
@@ -63,17 +61,23 @@ export default Ember.Controller.extend({
 		},
 		addChildToFamily: function ()
 		{
-			 var self = this;
+			self= this;
 			var onSuccess = function() {
-	        alert('Family has been created!');
-	        self.transitionToRoute('users.home');
+	        alert('User has been created, please sign in!');
+	        //self.transitionToRoute('signIn');
 	      };
 
 	      var onFail = function(response) {
 	        // deal with the failure here
 	      };
-      		this.set('family.familyName', this.get('familyName'));
-      		this.get('family').save().then(onSuccess,onFail);
+      		this.set('userFamily.familyName', this.get('selectedFamily'));
+      		Ember.$.each(this.get('selectedUsers'), function(i, item) {
+				self.set('userFamily.userName', item);
+				self.get('userFamily').save();
+			});
+			this.set('selectedFamily', []);
+			this.transitionToRoute('users.home');
+      		
 		}
 
 	}
