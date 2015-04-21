@@ -12,7 +12,7 @@
       <p id="p">Child Username:</p>
       {{input type= "text" class="form-control" placeholder="UserName" value=userName}}
       <button type="submit" class="btn btn-primary" {{action 'searchUser'}}>Search User</button>
-      <button type="submit" class="btn btn-primary" {{action 'clearUserField'}}>Clear</button>
+      <button type="submit" class=" btn btn-warning" {{action 'clearUserField'}}>Clear</button>
 
       <p>Selected users</p>
     {{#each selectedUserName in selectedUsers}}
@@ -33,7 +33,7 @@
 </div>
     </div>
 
- {{#each selectedUserName in selectedUsers}}
+ {{#each userName}}
     <div class=" col-md-3">
       {{#link-to 'users.home'}}
       

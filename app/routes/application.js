@@ -29,6 +29,25 @@ default Ember.Route.extend(ApplicationRouteMixin, {
       }if( role === 'child'){
         this.transitionTo('child.home');
       }
+    },
+    
+    
+    routeIfAlreadyAuthenticated: function() {
+    
+    var role = this.get('session').get('user_role');
+      
+      if(role === 'parent'){
+        
+        this.transitionTo('users.home');
+      
+      }
+      else{
+      
+        this.transitionTo('child.home');
+      
+      }
+        
+    
     }
 
 
