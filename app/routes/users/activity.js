@@ -21,5 +21,15 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 		});
     	controller.set('familiesSelection', familiesSelection);
     });
+    Ember.$.getJSON('http://localhost:3000/v1/users', function( data ) {
+      var familiesSelection = [];
+    data = data['families'];
+    
+    Ember.$.each(data, function(i, item) {
+      
+        familiesSelection.push(item);
+    });
+      controller.set('acb', familiesSelection);
+    });
   }
 });

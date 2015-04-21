@@ -36,7 +36,7 @@ export default Ember.Controller.extend({
 			  });
 			};
 
-			onSuccess('http://localhost:3000/v1/users?user_name=' + userN).then(function(json) {
+			onSuccess('http://localhost:3000/v1/users/username?user_name=' + userN).then(function(json) {
 			
 				
 			  if(-1 === Ember.$.inArray(userN, tempUsers))
