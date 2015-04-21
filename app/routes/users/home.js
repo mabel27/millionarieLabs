@@ -7,6 +7,19 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   },
   setupController: function(controller, model) {
     this._super(controller, model);
+    Ember.$.getJSON('http://localhost:3000/v1/user_families', function( data ) {
+      var familiesDisplay = [];
+    data = data['families'];
+      Ember.$.each(data, function(i, item){
+      
+        familiesDisplay.push(item);
+        
+      });
+      
+      controller.set('familiesDisplay', familiesDisplay);
+      
+    });
+
   	Ember.$.getJSON('http://localhost:3000/v1/families', function( data ) {
     	var familiesSelection = [];
 		data = data['families'];
@@ -18,6 +31,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     	controller.set('familiesSelection', familiesSelection);
    
     });
+    
        controller.set('userFamily', this.store.createRecord('user-family', {}));
       controller.set('family', this.store.createRecord('family', {}));
   }

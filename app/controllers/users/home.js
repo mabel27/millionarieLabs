@@ -2,87 +2,134 @@
 
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export
+default Ember.Controller.extend({
 
-	userName: '',
-	selectedUsers: [],
-	selectedFamily: '',
-	actions: {
+  userName: '',
+  selectedUsers: [],
+  selectedFamily: '',
 
-		searchUser: function ()
-		{
-			var self = this;
-			var userN = self.get('userName');
-			var tempUsers = self.get('selectedUsers');
-			var onSuccess = function(url) {
-			  return new Promise(function(resolve, reject){
-			    var xhr = new XMLHttpRequest();
 
-			    xhr.open('GET', url);
-			    xhr.onreadystatechange = handler;
-			    xhr.responseType = 'json';
-			    xhr.setRequestHeader('Accept', 'application/json');
-			    xhr.send();
+  init: function () {
 
-			    function handler() {
-			      if (this.readyState === this.DONE) {
-			        if (this.status === 200) {
-			          resolve(this.response);
-			        } else {
-			          reject(new Error('getJSON: `' + url + '` failed with status: [' + this.status + ']'));
-			        }
-			      }
-			    }
-			  });
-			};
+    var self = this;
+    var userN1 = self.get('userFamily.userName');
+    alert(userN1);
 
-			onSuccess('http://localhost:3000/v1/users?user_name=' + userN).then(function(json) {
-			
-				
-			  if(-1 === Ember.$.inArray(userN, tempUsers))
-			  {
-			  	alert('Found user, search for more');
-			  	tempUsers.pushObject(userN);
-		
-			  	self.set('selectedUsers', tempUsers);
-			  }
-			  else 
-			  {
-			  	alert('Already selected');
-			  }
-			  
-			}, function(reason) {
-			 alert('fail');
-			});		
-		},
-		clearUserField: function ()
-		{
-			this.set('selectedUsers', []);
-		},
-		addChildToFamily: function ()
-		{
-			self= this;
-			var onSuccess = function() {
-	        alert('User has been created, please sign in!');
-	        //self.transitionToRoute('signIn');
-	      };
+    var u = self.get('familiesDisplay');
+    
+    var onSuccess = function (url) {
+        return new Promise(function (resolve, reject) {
+          var xhr = new XMLHttpRequest();
 
-	      var onFail = function(response) {
-	        // deal with the failure here
-	      };
-      		this.set('userFamily.familyName', this.get('selectedFamily'));
-      		Ember.$.each(this.get('selectedUsers'), function(i, item) {
-				self.set('userFamily.userName', item);
-				self.get('userFamily').save();
-			});
-			this.set('userFamily', this.store.createRecord('user-family', {}));
-			this.get('selectedUsers').clear();
-			this.set('userName', '');
-			this.set('selectedFamily', '');
-            alert('The Child has been added to the family');
-			this.transitionToRoute('users.home');
-      		
-		}
+          xhr.open('GET', url);
+          xhr.onreadystatechange = handler;
+          xhr.responseType = 'json';
+          xhr.setRequestHeader('Accept', 'application/json');
+          xhr.send();
 
-	}
+          function handler() {
+            if (this.readyState === this.DONE) {
+              if (this.status === 200) {
+                resolve(this.response);
+              } else {
+                reject(new Error('getJSON: `' + url + '` failed with status: [' + this.status + ']'));
+              }
+            }
+          }
+        });
+      };
+          onSuccess('http://localhost:3000/v1/user_families?user_name=' + userN1).then(function (json) {
+
+
+        if (-1 === Ember.$.inArray(userN1, tempUsers)) {
+          alert('userN1');
+          tempUsers.pushObject(userN1);
+          
+          self.set('u', tempUsers);
+        } else {
+          alert('Already selected');
+        }
+
+      }, function (reason) {
+        alert('fail');
+      });
+
+
+  },
+
+
+  actions: {
+
+    searchUser: function () {
+      var self = this;
+      var userN = self.get('userName');
+      var tempUsers = self.get('selectedUsers');
+      var onSuccess = function (url) {
+        return new Promise(function (resolve, reject) {
+          var xhr = new XMLHttpRequest();
+
+          xhr.open('GET', url);
+          xhr.onreadystatechange = handler;
+          xhr.responseType = 'json';
+          xhr.setRequestHeader('Accept', 'application/json');
+          xhr.send();
+
+          function handler() {
+            if (this.readyState === this.DONE) {
+              if (this.status === 200) {
+                resolve(this.response);
+              } else {
+                reject(new Error('getJSON: `' + url + '` failed with status: [' + this.status + ']'));
+              }
+            }
+          }
+        });
+      };
+
+      onSuccess('http://localhost:3000/v1/users?user_name=' + userN).then(function (json) {
+
+
+        if (-1 === Ember.$.inArray(userN, tempUsers)) {
+          alert('Found user, search for more');
+          tempUsers.pushObject(userN);
+
+          self.set('selectedUsers', tempUsers);
+        } else {
+          alert('Already selected');
+        }
+
+      }, function (reason) {
+        alert('fail');
+      });
+    },
+    clearUserField: function () {
+      this.set('selectedUsers', []);
+    },
+    addChildToFamily: function () {
+      self = this;
+      var onSuccess = function () {
+        alert('User has been created, please sign in!');
+        //self.transitionToRoute('signIn');
+      };
+
+      var onFail = function (response) {
+        // deal with the failure here
+      };
+      this.set('userFamily.familyName', this.get('selectedFamily'));
+      Ember.$.each(this.get('selectedUsers'), function (i, item) {
+        self.set('userFamily.userName', item);
+        self.get('userFamily').save();
+      });
+      this.set('userFamily', this.store.createRecord('user-family', {}));
+      this.get('selectedUsers').clear();
+      this.set('userName', '');
+      this.set('selectedFamily', '');
+      alert('The Child has been added to the family');
+
+      this.transitionToRoute('users.home');
+
+    }
+
+  }
 });
